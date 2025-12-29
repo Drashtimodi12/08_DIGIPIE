@@ -21,6 +21,7 @@ class departmentAPI(APIView):
     # ------------------------
     # Authentication
     # ------------------------
+    
     authentication_classes = [JWTAuthentication]
     permission_classes = [IsAuthenticated]
 

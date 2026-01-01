@@ -161,7 +161,6 @@ STEP 12:- Changes in Project urls.py
             ]
 
 STEP 13:- Changes in AppName urls.py
-            from django.contrib import admin
             from django.urls import path
             from myapp.views import *
 	    from django.conf import settings

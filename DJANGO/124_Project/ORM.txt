@@ -1,0 +1,27 @@
+(myenv) PS E:\DIGIPIE\DJANGO\124_Project> py .\manage.py shell
+18 objects imported automatically (use -v 2 for details).
+
+Ctrl click to launch VS Code Native REPL
+Python 3.13.5 (tags/v3.13.5:6cb20a2, Jun 11 2025, 16:15:46) [MSC v.1943 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> from django.contrib.auth.models import User
+>>> from myapp.models import *
+
+>>> user1 = User.objects.create_user(username='drashti', email='drashtimodi33@gmail.com', password='12345')
+>>> user2 = User.objects.create_user(username='sejal', email='seju12@gmail.com', password='12345')          
+>>> user3 = User.objects.create_user(username='daizy', email='daizy@gmail.com', password='12345') 
+
+>>> profile = UserProfile.objects.create(user=user1, phone=9909449049, address='surat')
+
+>>> user1 = User.objects.get(id=2) 
+>>> profile = UserProfile.objects.create(user=user1, phone=9794357478, address='Ahmedabad')
+
+>>> category = Category.objects.create(name='Electronics', description='Electronic gadgets and devices')
+
+>>> product = Product.objects.create(category=category, name='Laptop', price=55000.00, stock=10, image='myapp/img/Electronics.PNG', description='High performance laptop', is_active=True)
+
+>>> order = Order.objects.create(user=user1, product=product, quantity=1, total_price=product.price)
+
+>>> exit()
+now exiting InteractiveConsole...

@@ -1,0 +1,18 @@
+pgAdmin : pip install psycopg2-binary
+
+connect pgAdmin to settings.py:
+
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': 'django_db',
+            'USER': 'postgres',
+            'PASSWORD': 'your_password',
+            'HOST': 'localhost',
+            'PORT': '5432',
+        }
+    }
+
+
+all tables auto generate if in pgAdmin created those table:   
+        py .\manage.py inspectdb > myapp/models.py

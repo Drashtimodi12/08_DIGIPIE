@@ -17,3 +17,4 @@ CREATE TABLE employee_profile(
 	address TEXT,
 	phone VARCHAR(15)
 );
+

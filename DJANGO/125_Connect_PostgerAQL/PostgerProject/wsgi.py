@@ -1,5 +1,5 @@
 """
-WSGI config for Postger_Project project.
+WSGI config for PostgerProject project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Postger_Project.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'PostgerProject.settings')
 
 application = get_wsgi_application()

@@ -1,2 +1,0 @@
-Import all tables from pgAdmin
-    python manage.py inspectdb > myapp/models.py

@@ -7,3 +7,4 @@ def myfun(s):
     return rev
 
 print(myfun('Drashti Python'))
+# OP: nohtyP ithsarD

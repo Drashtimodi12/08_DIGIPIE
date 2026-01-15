@@ -22,3 +22,6 @@ show_details(t)
 
 s = Student()
 show_details(s)
+# OP:
+# Teacher have figerprint to clock in and out...
+# Student have ID number and Name...

@@ -11,3 +11,6 @@ def fact(a):
 b = int(input("Enter the number for factorial: "))
 print(f"The number of factorial is {fact(b)}")
 
+# OP:
+# Enter the number for factorial: 5
+# The number of factorial is 120

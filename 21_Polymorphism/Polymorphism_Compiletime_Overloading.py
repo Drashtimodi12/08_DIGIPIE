@@ -49,3 +49,8 @@ ol.myfun()
 ol.myfun(10)
 ol.myfun(10, 20)
 ol.myfun(1, 2, 3, 4)
+# OP:
+# Function with no argument.
+# Function with 1 argument.
+# Function with 2 arguments.
+# Function with many arguments.

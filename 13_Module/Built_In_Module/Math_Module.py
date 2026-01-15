@@ -33,3 +33,14 @@ print(math.floor(4.6))        # Output: 4
 print(math.sqrt(8))                 # Output: 2.8284271247461903
 print(f"{math.sqrt(8):.2f}")        # Output: 2.83
 print(math.sqrt(100))               # Output: 10.0
+print(math.isqrt(15))               # Output: Integer square root of 15 = 3
+print(math.sqrt(25).is_integer())   # Output: True (since sqrt(25) is a whole number)
+
+# ------5. pow()--------
+print(math.pow(2,4))         # Output: 2^4 = 16.0
+
+# ------6. round()--------
+print(round(2.4))            # Output: Rounds to nearest integer (2)
+
+# ------7. pi()--------
+print(math.pi)               # Output: Value of π = 3.141592653589793

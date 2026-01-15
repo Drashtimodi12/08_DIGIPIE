@@ -1,0 +1,115 @@
+View all Database:-    show dbs
+
+
+Create new database AND Switch to database:-	use db_name
+
+
+View Current Database:-		db
+
+
+Parmently Delete Database:-	db.dropDatabase()
+
+
+View all Database Collection:-	   show collections
+
+
+Create new Collection :-	db.createCollection('collection_name')
+
+
+Switch to Collection:-		use collection_name
+
+
+Delete Collection:-	db.collection_name.drop()
+
+
+Insert One Rows in Collection:-		db.collection_name.insertOne({'name':'T-shirt', 'price':500})
+
+
+Insert Many Rows in Collection:-	db.collection_name.insertMany([{'name':'T-shirt', 'price':500},{'name':'Shirt', 'price':800}])
+
+
+Array style Show all Collections Data:-	db.collection_name.find()
+[
+  { _id: ObjectId("..."), name: "T-shirt", price: 500 },
+  { _id: ObjectId("..."), name: "Shoes", price: 3000 },
+  ...
+]
+
+
+
+JSON style Show all Collections Data:-	db.collection_name.find().pretty()
+{
+  _id: ObjectId("..."),
+  name: "T-shirt",
+  price: 500
+}
+{
+  _id: ObjectId("..."),
+  name: "Shoes",
+  price: 3000
+}
+...
+
+
+
+Show Limited Number of Collection:-		db.collection_name.find().pretty().limit(3) 	/
+						db.collection_name.find().limit(3)	
+
+
+
+Sort by Ascending Order:-	db.collection_name.find().sort({ key_name:1 }).pretty()
+
+
+
+Sort by Descending Order:-	db.collection_name.find().sort({ key_name:-1 }).pretty()
+
+
+Search Collection row:- 	db.collection_name.find({ key: 'value', key: 'value,...}).pretty()	/
+				db.collection_name.findOne({ key: 'value', key: 'value,...}).pretty()
+
+
+
+Count the Number of rows in Collection:-	db.collection_name.find().count()
+
+
+
+
+$gt = greater than
+
+$lt = less than
+
+$eq = equal
+
+$ne = not equal
+
+$set
+
+$rename
+
+
+
+
+
+Update Collection:-		db.collection_name.updateOne({ <filter> },
+  							{ $set: { <field>: <new value>} }	)
+
+
+
+Update multiple fields Collection:-		db.collection_name.updateOne({ <filter> },
+  							{ $set: { <field>: <new value>, <field>: <new value>} }	)
+
+
+
+Update all "value" products (use updateMany()):-	db.collection_name.updateMany({ <filter> },
+  							{ $set: { <field>: <new value> } }, {upsert:true})
+
+
+
+Rename a field :-	db.collection_name.updateMany({},{ $rename: { "price": "cost" } })
+
+
+
+
+Increment:-		db.collection_name.updateOne({ name: "Watch" },{ $inc: { price: 50 } })
+
+

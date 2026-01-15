@@ -18,3 +18,8 @@ e3 = employee('atifa', 9000)
 print(f'Name: {e1.name}, Salary: {e1.salary}')
 print(f'Name: {e2.name}, Salary: {e2.salary}')
 print(f'Name: {e3.name}, Salary: {e3.salary}')
+
+# OP: 
+# Name: drashti, Salary: 10000.0
+# Name: sejal, Salary: 3000.0
+# Name: atifa, Salary: 9000

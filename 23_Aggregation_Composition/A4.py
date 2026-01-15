@@ -15,3 +15,6 @@ c = Car()
 e = ElectricCar() 
 c.run()       
 e.run()
+# OP:
+# Car is running.
+# Electric Car is running silently.

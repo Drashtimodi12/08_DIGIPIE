@@ -17,3 +17,6 @@ b2 = Book('Story Book', 'Narendr')
 
 b1.display()
 b2.display()
+# OP:
+# Now a days i read Rich Man book writed by Drashti
+# Now a days i read Story Book book writed by Narendr

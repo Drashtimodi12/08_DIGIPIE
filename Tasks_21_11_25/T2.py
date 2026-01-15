@@ -12,3 +12,6 @@ class Book:
 
 obj = Book("'The Rich Man'", "Paresh")
 
+# OP:
+# I am Currently reading 'The Rich Man' Book.
+# Author name is Paresh.

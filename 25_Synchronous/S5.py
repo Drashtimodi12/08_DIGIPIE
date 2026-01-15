@@ -26,4 +26,11 @@ for file in files:
 end = time.perf_counter()
 
 print(f"Total time: {end - start:.2f} seconds")
-
+# OP:
+# Hello
+# S51.txt read in 2.01 seconds
+# Learner
+# S52.txt read in 2.03 seconds
+# I am Drashti...
+# S53.txt read in 2.04 seconds
+# Total time: 6.08 seconds

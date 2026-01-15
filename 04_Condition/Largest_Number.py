@@ -10,3 +10,9 @@ elif b >= a and b >= c:
     print(f"Largest number is {b}.")
 else:
     print(f"Largest number is {c}.")
+
+# OP:
+# Enter 1 numbers: 20
+# Enter 2 numbers: 3
+# Enter 3 numbers: 56
+# Largest number is 56.0.

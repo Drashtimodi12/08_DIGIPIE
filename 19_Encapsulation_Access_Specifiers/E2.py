@@ -47,3 +47,14 @@ print(acc1.deposit())
 print(acc1.withdraw())
 print(f"\nFinal balance is: {acc1.get_balance()}")
 
+# OP:
+# Enter amount to deposit in your account: 200
+# Your current balance is : 5200.0
+# None
+
+# Enter amount to withdraw in your account: 200
+# Withdraw: 200.0
+# Remaining Balance: 5000.0
+# None
+
+# Final balance is: 5000.0

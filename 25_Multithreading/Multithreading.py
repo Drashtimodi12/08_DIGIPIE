@@ -82,3 +82,9 @@ t1.join()
 t2.join()
 
 print("Both tasks completed (Main thread ends)")
+# OP:
+# Function 1 start
+# Function 2 start
+# Function 2 Finished
+# Function 1 Finished
+# Both tasks completed (Main thread ends)

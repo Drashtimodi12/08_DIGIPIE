@@ -35,3 +35,7 @@ class ScienceStu(Student):
 s = ScienceStu()
 s.display_name('Drashti')
 s.grade()
+# OP:
+# Your name is Drashti
+# Enter Marks to check grade: 67
+# Grade C.

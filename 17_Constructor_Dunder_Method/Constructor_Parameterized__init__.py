@@ -5,3 +5,4 @@ class Demo:
 
 d = Demo('Drashti', 21)
 print(f"Name= {d.name} and Age = {d.age}.")
+# OP: Name= Drashti and Age = 21.

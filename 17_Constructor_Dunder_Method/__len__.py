@@ -19,3 +19,4 @@ l = length([1, 4, 6])
 
 # len(l) internally calls l.__len__()
 print(len(l))
+# OP: 3

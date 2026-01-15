@@ -11,3 +11,6 @@ if a >= 0:
         print(f"{a} is not lies between 10 to 50.")
 else:
     print(f"{a} is negative.")
+# OP:
+# Enter a number: -12
+# -12.0 is negative.

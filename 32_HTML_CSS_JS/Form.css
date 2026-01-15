@@ -1,0 +1,24 @@
+/* Apply a background color to all elements on the page */
+* {
+    background-color: cornflowerblue;
+}
+
+/* Set default text color for all <h1> headings */
+h1 {
+    color: red;
+}
+
+/* Change <h1> text color when the user hovers over it */
+h1:hover {
+    color: chartreuse;
+}
+
+/* Change the color of <a> (anchor/link) elements when hovered */
+a:hover {
+    color: aqua;
+}
+
+/* Set the color of visited <a> links */
+a:visited {
+    color: darkgreen;
+}

@@ -18,3 +18,13 @@ for i in range(1, 5):
 
 end = time.perf_counter()
 print(f"Total server time: {end - start:.2f} seconds")
+# OP:
+# Processing request 1...
+# Request 1 completed.
+# Processing request 2...
+# Request 2 completed.
+# Processing request 3...
+# Request 3 completed.
+# Processing request 4...
+# Request 4 completed.
+# Total server time: 8.00 seconds

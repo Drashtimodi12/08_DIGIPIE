@@ -4,3 +4,4 @@ def myfun(a):
     return a * a
 
 print("Square of number is ",myfun(2))
+# OP: Square of number is  4

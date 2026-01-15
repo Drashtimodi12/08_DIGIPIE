@@ -45,3 +45,16 @@ e1.set_salary()
 print("\nUpdated Details:")
 print("Name:", e1.get_name())
 print("Salary:", e1.get_salary())
+# OP:
+# Name: Drashti
+# Salary: 10000
+
+# Trying invalid salary:
+# Enter name: Daizy
+
+# Trying valid salary:
+# Enter New salary: 10000
+
+# Updated Details:
+# Name: Daizy
+# Salary: 10000.0

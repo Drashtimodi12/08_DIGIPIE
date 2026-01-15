@@ -6,7 +6,7 @@ a = [1, 2, 3, 4, 5, 6]
 for i in a:
     if i % 2 != 0:
         a.remove(i)
-print(a)
+print(a)        # OP: [2, 4, 6]
 
 print("\n====================\n")
 
@@ -17,4 +17,4 @@ while i < len(a):
     if i % 2 == 0:
         b.append(a[i])
     i += 1
-print(b)
+print(b)    # OP: [2, 6]

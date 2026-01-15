@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX</title>
+    <!-- Importing jQuery library from CDN link:https://releases.jquery.com/ -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" 
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <script>
+
+
+        $(document).ready(function(){
+            // alert("Page is ready");
+            getCountry()
+        })
+        const getCountry = () =>{
+            $.get("countries", {}, function(rt){
+                // alert(rt.data)
+
+                var options = "<option>---Select Country---</option>";
+                rt.data.map(ele =>{
+                    options+="<option value="+ele.id+">"+ele.name+"</option>"
+                });
+
+                $("#country").html(options);
+            });
+        }
+
+
+        const getStates = (cid) => {
+            // alert(cid)
+            $.get("states", {cid}, function(rt){
+
+
+                var options = "<option>---Select State---</option>";
+                rt.data.map(ele =>{
+                    options+="<option value="+ele.id+">"+ele.name+"</option>"
+                });
+
+                $("#state").html(options);
+            });
+        }
+
+
+        const getCities = (sid) => {
+            // alert(sid)
+            $.get("cities", {sid}, function(rt){
+
+
+                var options = "<option>---Select City---</option>";
+                rt.data.map(ele =>{
+                    options+="<option value="+ele.id+">"+ele.name+"</option>"
+                });
+
+                $("#city").html(options);
+            });
+        }
+       
+
+
+
+
+        const search = (data)=> {
+            // alert(data)
+
+            $.get("search",{data},function(rt){
+                // alert(rt)
+                // alert(rt.data)
+
+                var rows = "<ul>";
+ 
+                rt.data.map(ele=>{
+                    // console.log(ele.name);
+
+                    rows+="<li>"+ele.name+"</li>";
+                })
+                rows += "</ul>";
+                // alert(rows);
+
+                $('#sdata').html(rows)
+            })
+        }
+    </script>
+
+
+
+
+</head>
+<body>
+    <h1>AJAX Search Example</h1>
+    <hr>
+    <input type="text" onkeyup="search(value)" placeholder="Search...">
+    <div id="sdata"></div>
+
+    <br><br><br>
+
+    <h1>AJAX Country, State, City Example</h1>
+    <hr>
+    <select name="country" id="country" onchange="getStates(value)">
+        <option value="0">---Select Country---</option>
+    </select>
+
+    <select name="state" id="state" onchange="getCities(value)">
+        <option value="0">---Select State---</option>
+    </select>
+
+    <select name="city" id="city">
+        <option value="0">---Select City---</option>
+    </select>
+
+    <br><br><br>
+
+    <!-- <h2><a href="crud_ajax">CRUD USING AJAX</a></h2> -->
+    <h2><a href="{% url 'ajaxcrud' %}">CRUD USING AJAX</a></h2>
+
+</body>
+</html>

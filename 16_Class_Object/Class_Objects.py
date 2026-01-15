@@ -1,35 +1,19 @@
-# -----------------------------------------
-# Example 1: Simple class with class variable
-# -----------------------------------------
+# Define a class named 'Pen'
+class Pen :
 
-# Defining a class named 'num'
-class num:
-    # Class variable (shared by all objects)
-    x = 50
+    # Method to display class attributes
+    def display(self) :
+        print("Display Calling...")
 
-# Creating an object of class 'num'
-X = num()
+    # Another method inside the class
+    def test(self) :
+        print("Test Calling...")
 
-# Accessing class variable using object
-print(X.x)   # Output: 50
+# Creating objects of class 'Pen'
+P = Pen()       # Creating an instance (object) of the 'Pen' class
+P.display()     # Calling the 'display' method using the object 'P'
+P.test()        # Calling the 'test' method using the object 'P'
 
-
-# -----------------------------------------
-# Example 2: Class with a method that prints value
-# -----------------------------------------
-
-# Defining another class named 'Car'
-class Car:
-    # Class variable
-    x = 50
-
-    # Method inside class
-    def color(self):
-        # 'self.x' is used to access class variable using object
-        print(f"Value of x is: {self.x}")
-
-# Creating an object of class 'Car'
-A = Car()
-
-# Calling the method using object
-A.color()    # Output: Value of x is: 50
+# Output:
+# Display Calling...
+# Test Calling...

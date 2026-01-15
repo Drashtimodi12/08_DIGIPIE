@@ -1,0 +1,103 @@
+PS C:\PYTHON_PROGRAM\PYTHON_FRAMEWORK\32_CRUD_BOOTSTRAP> py -m venv myenv
+PS C:\PYTHON_PROGRAM\PYTHON_FRAMEWORK\32_CRUD_BOOTSTRAP> .\myenv\Scripts\activate
+(myenv) PS C:\PYTHON_PROGRAM\PYTHON_FRAMEWORK\32_CRUD_BOOTSTRAP> pip install django
+Collecting django
+  Using cached django-5.2.3-py3-none-any.whl (8.3 MB)
+Collecting asgiref>=3.8.1
+  Using cached asgiref-3.8.1-py3-none-any.whl (23 kB)
+Collecting tzdata
+  Using cached tzdata-2025.2-py2.py3-none-any.whl (347 kB)
+Collecting sqlparse>=0.3.1
+  Using cached sqlparse-0.5.3-py3-none-any.whl (44 kB)
+Collecting typing-extensions>=4
+  Using cached typing_extensions-4.14.0-py3-none-any.whl (43 kB)
+Installing collected packages: tzdata, typing-extensions, sqlparse, asgiref, django
+Successfully installed asgiref-3.8.1 django-5.2.3 sqlparse-0.5.3 typing-extensions-4.14.0 tzdata-2025.2
+
+[notice] To update, run: python.exe -m pip install --upgrade pip
+(myenv) PS C:\PYTHON_PROGRAM\PYTHON_FRAMEWORK\32_CRUD_BOOTSTRAP> pip install djangorestframework
+Collecting djangorestframework
+  Using cached djangorestframework-3.16.0-py3-none-any.whl (1.1 MB)
+Requirement already satisfied: django>=4.2 in c:\python_program\python_framework\32_crud_bootstrap\myenv\lib\site-packages (from djangorestframework) (5.2.3)
+Requirement already satisfied: asgiref>=3.8.1 in c:\python_program\python_framework\32_crud_bootstrap\myenv\lib\site-packages (from django>=4.2->dRequirement already satisfied: tzdata in c:\python_program\python_framework\32_crud_bootstrap\myenv\lib\site-packages (from django>=4.2->djangorestframework) (2025.2)
+Requirement already satisfied: sqlparse>=0.3.1 in c:\python_program\python_framework\32_crud_bootstrap\myenv\lib\site-packages (from django>=4.2->djangorestframework) (0.5.3)
+Requirement already satisfied: typing-extensions>=4 in c:\python_program\python_framework\32_crud_bootstrap\myenv\lib\site-packages (from asgiref>=3.8.1->django>=4.2->djangorestframework) (4.14.0)
+Installing collected packages: djangorestframework
+Successfully installed djangorestframework-3.16.0
+[notice] A new release of pip available: 22.2.2 -> 25.1.1
+[notice] To update, run: python.exe -m pip install --upgrade pip
+(myenv) PS C:\PYTHON_PROGRAM\PYTHON_FRAMEWORK\32_CRUD_BOOTSTRAP> pip install pillow
+Collecting pillow
+  Using cached pillow-11.2.1-cp310-cp310-win_amd64.whl (2.7 MB)
+Installing collected packages: pillow
+Successfully installed pillow-11.2.1
+
+[notice] A new release of pip available: 22.2.2 -> 25.1.1
+[notice] To update, run: python.exe -m pip install --upgrade pip
+(myenv) PS C:\PYTHON_PROGRAM\PYTHON_FRAMEWORK\32_CRUD_BOOTSTRAP> pip install faker
+Collecting faker
+  Using cached faker-37.4.0-py3-none-any.whl (1.9 MB)
+Requirement already satisfied: tzdata in c:\python_program\python_framework\32_crud_bootstrap\myenv\lib\site-packages (from faker) (2025.2)       
+Installing collected packages: faker
+(myenv) PS C:\PYTHON_PROGRAM\PYTHON_FRAMEWORK\32_CRUD_BOOTSTRAP> pip list 
+------------------- -------
+asgiref             3.8.1
+Django              5.2.3
+djangorestframework 3.16.0
+Faker               37.4.0
+pillow              11.2.1
+pip                 22.2.2
+setuptools          63.2.0
+sqlparse            0.5.3
+typing_extensions   4.14.0
+tzdata              2025.2
+
+[notice] A new release of pip available: 22.2.2 -> 25.1.1
+[notice] To update, run: python.exe -m pip install --upgrade pip
+(myenv) PS C:\PYTHON_PROGRAM\PYTHON_FRAMEWORK\32_CRUD_BOOTSTRAP> py -m django startproject Project .
+(myenv) PS C:\PYTHON_PROGRAM\PYTHON_FRAMEWORK\32_CRUD_BOOTSTRAP> py .\manage.py startapp myapp
+(myenv) PS C:\PYTHON_PROGRAM\PYTHON_FRAMEWORK\32_CRUD_BOOTSTRAP> py .\manage.py makemigrations
+No changes detected
+(myenv) PS C:\PYTHON_PROGRAM\PYTHON_FRAMEWORK\32_CRUD_BOOTSTRAP> py .\manage.py migrate
+Operations to perform:
+Running migrations:
+  Applying contenttypes.0001_initial... OK
+  Applying auth.0001_initial... OK
+  Applying admin.0001_initial... OK
+  Applying admin.0002_logentry_remove_auto_add... OK
+  Applying admin.0003_logentry_add_action_flag_choices... OK
+  Applying contenttypes.0002_remove_content_type_name... OK
+  Applying auth.0002_alter_permission_name_max_length... OK
+  Applying auth.0003_alter_user_email_max_length... OK
+  Applying auth.0005_alter_user_last_login_null... OK
+  Applying auth.0006_require_contenttypes_0002... OK
+  Applying auth.0007_alter_validators_add_error_messages... OK
+  Applying auth.0008_alter_user_username_max_length... OK
+  Applying auth.0009_alter_user_last_name_max_length... OK
+  Applying auth.0010_alter_group_name_max_length... OK
+  Applying auth.0011_update_proxy_permissions... OK
+  Applying auth.0012_alter_user_first_name_max_length... OK
+  Applying sessions.0001_initial... OK
+(myenv) PS C:\PYTHON_PROGRAM\PYTHON_FRAMEWORK\32_CRUD_BOOTSTRAP> py .\manage.py createsuperuser
+Username (leave blank to use 'hp'): admin
+Email address: admin@gmail.com
+Password:
+Password (again):
+The password is too similar to the username.
+This password is too short. It must contain at least 8 characters.
+This password is too common.
+Bypass password validation and create user anyway? [y/N]: y
+Superuser created successfully.
+(myenv) PS C:\PYTHON_PROGRAM\PYTHON_FRAMEWORK\32_CRUD_BOOTSTRAP> py .\manage.py runserver      
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 17, 2025 - 10:12:32
+Django version 5.2.3, using settings 'Project.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+WARNING: This is a development server. Do not use it in a production setting. Use a production WSGI or ASGI server instead.
+For more information on production servers see: https://docs.djangoproject.com/en/5.2/howto/deployment/
+[17/Jun/2025 10:12:35] "GET / HTTP/1.1" 200 12068

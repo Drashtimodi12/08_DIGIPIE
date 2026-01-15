@@ -42,3 +42,26 @@ acc2.check_balance()
 acc2.withdraw(30)
 acc2.deposit(100)
 acc2.check_balance()
+
+# OP:
+
+# Deposite amount is 10 and Total Balance is 1010
+
+# Owner name is Drashti.
+# Current Balance is 1010 Rupess.
+
+# Withdrw amount is 700 and total Balance is 310
+
+# Owner name is Drashti.
+# Current Balance is 310 Rupess.
+# -------------------------------
+
+# Owner name is Sejal.
+# Current Balance is 5050 Rupess.
+
+# Withdrw amount is 30 and total Balance is 5020
+
+# Deposite amount is 100 and Total Balance is 5120
+
+# Owner name is Sejal.
+# Current Balance is 5120 Rupess.

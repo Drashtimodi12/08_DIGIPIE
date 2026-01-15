@@ -12,3 +12,4 @@ def fib(a):
 
 for i in range(8):
     print(fib(i), end= " ")
+# OP: 0 1 1 2 3 5 8 13 

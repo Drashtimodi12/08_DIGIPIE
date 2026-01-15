@@ -1,0 +1,25 @@
+2. pdfplumber
+Use For: Accurate extraction of text and tables, especially where layout matters (e.g., invoices, reports).
+
+Pros:
+
+Best for structured layout-based extraction
+
+Supports table recognition
+
+Can extract text positions, fonts, characters
+
+
+Cons:
+
+Cannot modify PDFs
+
+Slower for large files
+
+Example:
+
+import pdfplumber
+with pdfplumber.open("file.pdf") as pdf:
+    page = pdf.pages[0]
+    text = page.extract_text()
+    table = page.extract_table()

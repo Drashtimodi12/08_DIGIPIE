@@ -1,0 +1,28 @@
+Polymorphism is one of the fundamental concepts in Object-Oriented Programming (OOP) that allows objects of different 
+classes to be treated as objects of a common superclass. It is the ability of different objects to respond to the 
+same method call in different ways. Polymorphism provides a way to perform a single action in different forms.
+
+Polymorphism can be achieved in two ways:
+
+Method Overriding (Runtime Polymorphism):
+This occurs when a subclass provides a specific implementation of a method that is already defined in its superclass.
+The method in the subclass has the same name, return type, and parameters as the method in the superclass.
+
+
+Method Overloading (Compile-time Polymorphism):
+This occurs when multiple methods in the same class have the same name but different parameters (i.e., different type, 
+number, or both).
+Note: Python does not support method overloading directly as some other languages do (like Java or C++). 
+Instead, you can achieve similar functionality using default arguments or variable-length arguments.
+
+
+
+Operator Overloading:-  It is a feature in object-oriented programming that allows you to define custom behavior 
+for standard operators (such as +, -, *, etc.) when they are used with objects of a user-defined class. This is 
+achieved by defining special methods in your class known as dunder (double underscore) methods.
+
+For example:
+__add__(self, other): Defines behavior for the addition operator +.
+__sub__(self, other): Defines behavior for the subtraction operator -.
+__mul__(self, other): Defines behavior for the multiplication operator *.
+__truediv__(self, other): Defines behavior for the true division operator /.

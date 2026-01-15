@@ -31,3 +31,6 @@ result = input("Enter to check: ")
 
 a = re.match(pattern, result)
 print(a)
+# OP:
+# Enter to check: 12drashti modi
+# <re.Match object; span=(0, 14), match='12drashti modi'>

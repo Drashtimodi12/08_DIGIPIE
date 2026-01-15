@@ -1,0 +1,226 @@
+=========================Django ORM all querys on official website(https://docs.djangoproject.com/en/5.1/topics/db/queries/)================================
+
+=========================Django ORM Methods with Uses================================
+
+---------------------------1. Creating Data------------------------------------
+create(): Creates and saves a new object in one step.
+Example: Student.objects.create(name="Alice", age=22)
+save(): Saves the current instance to the database.
+Example: s = Student(name="Bob"); s.save()
+
+---------------------------2. Reading Data (Querying)------------------------------------
+all(): Returns all records.
+Example: Student.objects.all()
+filter(**kwargs): Returns matching records.
+Example: Student.objects.filter(age=22)
+exclude(**kwargs): Returns non-matching records.
+Example: Student.objects.exclude(age=22)
+get(**kwargs): Returns single matching object or raises DoesNotExist.
+Example: Student.objects.get(id=1)
+first(): Returns the first object from a queryset.
+Example: Student.objects.all().first()
+last(): Returns the last object from a queryset.
+Example: Student.objects.all().last()
+count(): Returns number of objects in queryset.
+Example: Student.objects.count()
+exists(): Returns True if records exist.
+Example: Student.objects.filter(age=22).exists()
+values(): Returns dictionaries instead of model instances.
+Example: Student.objects.values('name', 'age')
+values_list(): Returns tuples instead of model instances.
+Example: Student.objects.values_list('name', flat=True)
+order_by(): Orders queryset.
+Example: Student.objects.order_by('name')
+distinct(): Removes duplicates.
+Example: Student.objects.values('age').distinct()
+
+---------------------------3. Updating Data------------------------------------
+update(): Bulk update matching records.
+Example: Student.objects.filter(age=22).update(age=23)
+save(): Updates a single object after changing its fields.
+Example: s.age = 25; s.save()
+
+---------------------------4. Deleting Data------------------------------------
+delete(): Deletes an object or queryset.
+Example: Student.objects.get(id=1).delete()
+Example: Student.objects.filter(age=25).delete()
+
+---------------------------5. Complex Lookups (using Q)------------------------------------
+OR condition:
+from django.db.models import Q
+Student.objects.filter(Q(age=20) | Q(name='Alice'))
+AND condition:
+Student.objects.filter(Q(age=20) & Q(name='Alice'))
+NOT condition:
+Student.objects.filter(~Q(age=20))
+
+---------------------------6. Related Models (ForeignKey, OneToOne, ManyToMany)------------------------------------
+Access related objects:
+student.course (OneToOne or ForeignKey)
+course.student_set.all() (Reverse lookup)
+
+---------------------------7. Aggregation and Annotation------------------------------------
+aggregate():
+from django.db.models import Avg, Sum
+Student.objects.aggregate(Avg('age'))
+annotate():
+Course.objects.annotate(student_count=Count('student'))
+
+---------------------------8. Raw SQL (when needed)------------------------------------
+raw():
+Student.objects.raw('SELECT * FROM app_student')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                 
+PS C:\PYTHON_PROGRAM\PYTHON_FRAMEWORK\30_Static_Models_ORM> .\myenv\Scripts\activate
+
+
+(myenv) PS C:\PYTHON_PROGRAM\PYTHON_FRAMEWORK\30_Static_Models_ORM> cd .\Project\
+
+
+(myenv) PS C:\PYTHON_PROGRAM\PYTHON_FRAMEWORK\30_Static_Models_ORM\Project> py .\manage.py shell
+8 objects imported automatically (use -v 2 for details).
+
+Python 3.10.7 (tags/v3.10.7:6cc6b13, Sep  5 2022, 14:08:36) [MSC v.1933 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> from myapp.models import *
+>>> Student.objects.all()
+<QuerySet [<Student: Student object (1)>, <Student: Student object (2)>, <Student: Student object (3)>, <Student: Student object (4)>, <Student: Student object (5)>]>
+>>> st = Student(username="Kunjan", email="kunjan@gmail.com", phone="9094231245", age=22)
+>>> st.save()
+>>> Student.objects.all()                                                                 
+<QuerySet [<Student: Student object (1)>, <Student: Student object (2)>, <Student: Student object (3)>, <Student: Student object (4)>, <Student: Student object (5)>, <Student: Student object (6)>]>
+>>> Student.objects.create(username="Prince", email="prince@gmail.com", phone="9871234578", age=24)
+<Student: Student object (7)>
+>>> Student.objects.all()                                                                           
+<QuerySet [<Student: Student object (1)>, <Student: Student object (2)>, <Student: Student object (3)>, <Student: Student object (4)>, <Student: Student object (5)>, <Student: Student object (6)>, <Student: Student object (7)>]>
+>>> st = Student.objects.get(id=1)
+>>> st.username="Drashti Modi"
+>>> st.save()
+>>> st.delete(id=7)
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+TypeError: Model.delete() got an unexpected keyword argument 'id'
+>>> st.delete()
+(1, {'myapp.Student': 1})
+>>> Student.objects.filter(age=21) 
+<QuerySet []>
+>>> st.username="Drashti Modi"
+>>> st.save()
+>>> st.delete(id=7)
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+TypeError: Model.delete() got an unexpected keyword argument 'id'
+>>> st.delete()
+(1, {'myapp.Student': 1})
+>>> Student.objects.filter(age=21)
+<QuerySet []>
+>>> Student.objects.filter(age=22)
+<QuerySet [<Student: Student object (4)>, <Student: Student object (6)>]>
+>>> Student.objects.filter(username__startswith="S")
+<QuerySet [<Student: Student object (3)>]>
+>>> Student.objects.filter(age__gt=22)
+<QuerySet [<Student: Student object (2)>, <Student: Student object (3)>, <Student: Student object (7)>]>
+>>> st.save()
+>>> st.delete(id=7)
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+TypeError: Model.delete() got an unexpected keyword argument 'id'
+>>> st.delete()
+(1, {'myapp.Student': 1})
+>>> Student.objects.filter(age=21)
+<QuerySet []>
+>>> st.delete()
+(1, {'myapp.Student': 1})
+>>> Student.objects.filter(age=21)
+<QuerySet []>
+>>> Student.objects.filter(age=21)
+<QuerySet []>
+>>> Student.objects.filter(age=22)
+<QuerySet [<Student: Student object (4)>, <Student: Student object (6)>]>
+>>> Student.objects.filter(username__startswith="S")
+<QuerySet [<Student: Student object (3)>]>
+>>> Student.objects.filter(age__gt=22)
+<QuerySet [<Student: Student object (2)>, <Student: Student object (3)>, <Student: Student object (7)>]>
+>>> Student.objects.filter(age__gte=22)
+<QuerySet [<Student: Student object (2)>, <Student: Student object (3)>, <Student: Student object (4)>, <Student: Student object (6)>, <Student: Student object (7)>]>
+>>> Student.objects.all()[5:10]
+<QuerySet [<Student: Student object (7)>, <Student: Student object (8)>, <Student: Student object (9)>, <Student: Student object (10)>, <Student: Student object (11)>]>
+>>> Student.objects.all().order_by("username")
+<QuerySet [<Student: Student object (27)>, <Student: Student object (16)>, <Student: Student object (23)>, <Student: Student object (20)>, <Student: 
+Student object (22)>, <Student: Student object (4)>, <Student: Student object (5)>, <Student: Student object (18)>, <Student: Student object (19)>, <Student: Student object (15)>, <Student: Student object (11)>, <Student: Student object (6)>, <Student: Student object (10)>, <Student: Student object (8)>, <Student: Student object (25)>, <Student: Student object (14)>, <Student: Student object (7)>, <Student: Student object (12)>, <Student: Student object (17)>, <Student: Student object (21)>, '...(remaining elements truncated)...']>
+>>>
+>>> exit()
+
+
+
+
+
+
+
+
+
+
+
+(myenv) PS C:\PYTHON_PROGRAM\PYTHON_FRAMEWORK\30_Static_Models_ORM> pip install faker
+  Using cached faker-37.4.0-py3-none-any.whl (1.9 MB)
+Requirement already satisfied: tzdata in c:\python_program\python_framework\30_static_models_orm\myenv\lib\site-packages (from faker) (2025.2)
+Installing collected packages: faker
+Successfully installed faker-37.4.0
+
+[notice] A new release of pip available: 22.2.2 -> 25.1.1
+[notice] To update, run: python.exe -m pip install --upgrade pip
+
+
+
+(myenv) PS C:\PYTHON_PROGRAM\PYTHON_FRAMEWORK\30_Static_Models_ORM> pip list
+Package             Version
+------------------- -------
+asgiref             3.8.1
+Django              5.2.3
+djangorestframework 3.16.0
+Faker               37.4.0
+sqlparse            0.5.3
+typing_extensions   4.14.0
+tzdata              2025.2
+
+[notice] A new release of pip available: 22.2.2 -> 25.1.1
+[notice] To update, run: python.exe -m pip install --upgrade pip
+
+
+
+(myenv) PS C:\PYTHON_PROGRAM\PYTHON_FRAMEWORK\30_Static_Models_ORM> cd .\Project\
+
+
+
+(myenv) PS C:\PYTHON_PROGRAM\PYTHON_FRAMEWORK\30_Static_Models_ORM\Project> py .\manage.py shell
+Python 3.10.7 (tags/v3.10.7:6cc6b13, Sep  5 2022, 14:08:36) [MSC v.1933 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> from myapp import data
+>>> from myapp import data
+>>> exit()
+
+
+
+(myenv) PS C:\PYTHON_PROGRAM\PYTHON_FRAMEWORK\30_Static_Models_ORM\Project> py .\manage.py shell
+8 objects imported automatically (use -v 2 for details).
+
+Python 3.10.7 (tags/v3.10.7:6cc6b13, Sep  5 2022, 14:08:36) [MSC v.1933 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> from myapp import data
+>>> exit()

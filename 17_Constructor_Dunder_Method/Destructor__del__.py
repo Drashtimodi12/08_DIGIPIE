@@ -25,3 +25,7 @@ obj = Demo("Drashti")
 del obj
 
 print("Program End")
+# OP:
+# Object created for Drashti
+# Object destroyed for Drashti
+# Program End

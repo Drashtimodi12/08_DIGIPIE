@@ -18,3 +18,7 @@ elif a.isdigit():
     print(f"{a} is digits.")
 else:
     print(f"{a} is special character.")
+
+# OP:
+# Enter a single character:s
+# s is constant

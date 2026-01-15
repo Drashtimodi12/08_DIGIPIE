@@ -5,8 +5,10 @@ def num(l):
     return result
 a = [1,4,6,2]
 print("Sum of list number is ", num(a))
-
+# OP: Sum of list number is  13
 print("\n==================\n")
+
+
 
 def num(l):
     total = 0
@@ -15,3 +17,4 @@ def num(l):
     return total
 a = [1,4,6,2]
 print("Sum of list number is ", num(a))
+# OP: Sum of list number is  13

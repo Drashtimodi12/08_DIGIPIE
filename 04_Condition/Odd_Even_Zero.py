@@ -9,3 +9,6 @@ elif num % 2 == 0:
     print("Number is Even.")
 else:
     print("Nmber is Odd.")
+# OP:
+# Enter any number: 3
+# Nmber is Odd.

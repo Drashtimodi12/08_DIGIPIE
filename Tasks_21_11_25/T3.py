@@ -7,3 +7,5 @@ class Calculator:
 
 c = Calculator()
 print("Two number of addition is : ", c.add(21, 4))
+# OP:
+# Two number of addition is :  25

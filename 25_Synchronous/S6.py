@@ -64,3 +64,13 @@ def main():
 # Run program
 main()
 print("All tasks done synchronously.")
+# OP:
+# Downloading image...
+# Download completed. Saved as Images/1.jpg
+
+# Opening downloaded image...
+# Image opened and data processed.
+
+# Saving binary data into text file...
+# File saved as Images/binary1.txt
+# All tasks done synchronously.

@@ -1,0 +1,19 @@
+* {
+    background-color: cornflowerblue; /* Light blue background for all elements */
+}
+
+h1 {
+    color:  red; /* h1 heading text color */
+}
+
+h1:hover {
+    color: chartreuse; /* Changes h1 color on mouse hover */
+}
+
+a:hover {
+    color: aqua; /* Link color on hover */
+}
+
+a:visited {
+    color: darkgreen; /* Visited link color (green) */
+}

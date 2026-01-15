@@ -18,5 +18,7 @@ C2 = Car('I20', 'White')
 C1.info()
 C2.info()
 
-
+# OP:
+# Brand: XUV700, Color: Black, Wheels: 4
+# Brand: I20, Color: White, Wheels: 4
 

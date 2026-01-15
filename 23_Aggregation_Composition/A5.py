@@ -17,6 +17,9 @@ c = Car()
 c.accelerate()
 c.accelerate()
 c.accelerate()
-
+# OP:
+# Current speed:  10
+# Current speed:  20
+# Current speed:  30
 
 

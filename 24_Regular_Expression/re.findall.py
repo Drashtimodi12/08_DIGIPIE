@@ -13,3 +13,6 @@ if result:
     print("Find dot in the result.")
 else:
     print("Not Found result.")
+
+# OP:
+# Find dot in the result.

@@ -15,3 +15,6 @@ class MathUtils:
 
 print(MathUtils.add(10, 1))
 MathUtils.info()
+# OP:
+# 10 + 1 = 11
+# This is a math utility class.

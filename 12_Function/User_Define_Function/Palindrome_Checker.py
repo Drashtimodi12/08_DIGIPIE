@@ -7,3 +7,6 @@ def palindrome(a):
         return False
 b = input("Enter anything to check palindorme: ").upper()
 print(f"{palindrome(b)}")
+# OP:
+# Enter anything to check palindorme: 2
+# True

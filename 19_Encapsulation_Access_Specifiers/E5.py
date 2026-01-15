@@ -43,3 +43,12 @@ p1 = Product()
 p1.set_category()
 p1.set_price()
 p1.info()
+# OP:
+# Enter Category Name: light
+# Enter Product real price: 20
+
+# Product price is 20.0 Rupees.
+
+# --- Product Details ---
+# Category : light
+# Price    : 20.0 Rupees

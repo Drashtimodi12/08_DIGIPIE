@@ -4,3 +4,5 @@ class A:
 
 a = A()                         # Create object
 print(a._salary)                # Can access, but NOT recommended
+# OP:
+3000

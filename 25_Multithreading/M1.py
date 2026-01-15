@@ -46,7 +46,10 @@ t2.join()
 
 print("Both tasks completed (Main thread ends)")
 
-
+# OP:
+# 1 6 7 2 8 9 3 10 Difference func1:  2.0001941000227816
+# 4 5 Difference func1:  4.000213799998164
+# Both tasks completed (Main thread ends)
 
 
 print("\n====================================\n")
@@ -94,3 +97,20 @@ t2.join()
 
 
 print("All threads Done!")
+
+# OP:
+# Function 1: 1
+# Function 2: 6
+# Function 2: 7
+# Function 1: 2
+# Function 2: 8
+# Function 2: 9
+# Function 1: 3
+# Function 2: 10
+# Function 2: 11
+# Function 1: 4
+# Function 2 total time: 12.02 seconds
+# Function 1: 5
+# Function 1: 6
+# Function 1 total time: 24.01 seconds
+# All threads Done!

@@ -26,8 +26,16 @@ def add(a, b):
 
 # Calling decorated hello()
 hello()
+# OP:
+# Good Morning!
+# Hello World
+# Thanks for using Function...
 
 print("\n===================\n")
 
 # Calling decorated add()
 add(3, 6)
+# OP:
+# Good Morning!
+# 9
+# Thanks for using Function...

@@ -18,3 +18,6 @@ obj = Circle(), Square()
 
 for i in obj:
     i.area()
+# OP:
+# Circle of area formula = 3.14*r*r.
+# Square of area formula = s * s.

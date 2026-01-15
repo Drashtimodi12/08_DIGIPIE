@@ -4,3 +4,4 @@ class A:
 
 obj = A()
 print(obj.name)   # allowed ✔
+# OP: Drashti

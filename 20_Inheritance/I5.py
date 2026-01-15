@@ -38,3 +38,14 @@ i.details()
 i.intern_info()
 i.study()
 i.work()
+# OP:
+# Enter person name: drashti
+# Your name is drashti
+# I am studying as a student.
+
+# Enter person name: daizy
+# Your name is daizy
+
+# I am an intern, so I study and work both.
+# I am studying as a student.
+# I am doing worker-related tasks.

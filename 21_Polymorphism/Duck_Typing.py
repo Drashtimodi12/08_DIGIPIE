@@ -46,3 +46,14 @@ cat = Cat()
 # Passing different objects to display() function
 display(duck, dog)
 display(cat)    # This will cause ERROR because Cat has no speak() method
+
+# OP:
+# I am Duck and I am swimming.
+# Duck Duck!
+# Information Displayed...
+
+# I am Dog and I am swimming.
+# Woof Woof!
+# Information Displayed...
+
+# I am Cat and I am swimming.

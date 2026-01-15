@@ -23,8 +23,10 @@ def main():
 
 main()
 
-
-
+# OP:
+# Function 1 printing time 3 second
+# Function 2 printing time 5 second
+# Function 3 printing time 10 second
 
 
 

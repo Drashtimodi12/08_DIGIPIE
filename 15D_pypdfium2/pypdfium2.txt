@@ -1,0 +1,24 @@
+3. pypdfium2
+Use For: Fast rendering and converting PDF pages into images (JPG, PNG), or visual preview of PDFs.
+
+Pros:
+
+Super fast rendering
+
+Great for page previews, thumbnails
+
+Supports rotation, zoom, DPI settings
+
+Cons:
+
+No editing or advanced text extraction
+
+Mainly image-based
+
+Example:
+
+import pypdfium2
+pdf = pypdfium2.PdfDocument("file.pdf")
+page = pdf[0]
+bitmap = page.render().to_pil()
+bitmap.save("page1.png")

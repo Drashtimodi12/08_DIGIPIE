@@ -11,3 +11,11 @@ while True:
         break
     else:
         print("Guess another number: ")
+
+# OP:
+# Guess the number: 4
+# Guess another number: 
+# Guess the number: 6
+# Guess another number: 
+# Guess the number: 7
+# Congratulations! You guessed it correctly.

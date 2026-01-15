@@ -9,6 +9,5 @@ for i in l:
 
 ave = sum/len(l)
 
-print("Sum =", sum)
-print("Average =", ave)    
-    
+print("Sum =", sum)         # OP:   Sum = 16
+print("Average =", ave)     # OP:   Average = 4.0

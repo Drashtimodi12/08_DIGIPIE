@@ -1,0 +1,104 @@
+1. What is HTML?
+-> HTML stands for HyperText Markup Language.
+It is the standard language used to create and design webpages.
+
+2. Why is HTML important?
+-> It is the backbone of every website.
+It structures the content (text, images, videos, links, forms, etc.).
+All websites, no matter how complex, start with HTML.
+
+3. Basic Features of HTML:
+-> Markup Language	= Uses tags to mark content (like <p> for paragraph).
+Not a Programming Language	= It’s a markup language, so it doesn’t perform logic like loops or conditions.
+Platform Independent	= Works on all browsers and devices.
+Easy to Learn	= Simple syntax, beginner-friendly.
+
+4. Fun Fact:
+-> HTML is often used with:
+CSS (Cascading Style Sheets) – for styling.
+JavaScript – for interactivity.
+
+---------------------------------Structure Tags--------------------------------------------
+<!DOCTYPE html>	= Declares the HTML version (HTML5).
+<html>	= Root element of an HTML page.
+<head>	= Contains meta-information like title, CSS, scripts.
+<title>	= Sets the title of the webpage (shown on browser tab).
+<body>	= Contains all the visible content of the webpage.
+
+--> Structure of an HTML Document:
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My First Webpage</title>
+  </head>
+  <body>
+    <h1>Hello, World!</h1>
+    <p>This is a paragraph.</p>
+  </body>
+</html>
+
+---------------------------------Text Formatting Tags--------------------------------------------
+<h1> to <h6>	= Headings (h1 = largest, h6 = smallest).
+<p>	= Paragraphs.
+<br>	= Line break.
+<hr>	= Horizontal line.
+<b> or <strong>	= Bold text (semantic: <strong>).
+<i> or <em>	= Italic text (semantic: <em>).
+<u>	= Underlined text.
+<mark>	= Highlighted text.
+<small>	= Smaller text.
+<sub>	= Subscript.
+<sup>	= Superscript.
+<pre>	= Preformatted text (preserves spaces, line breaks).
+<blockquote>	= Quoted block of text.
+
+---------------------------------Link & Media Tags--------------------------------------------
+<a>	= Anchor tag for hyperlinks.
+<img>	= Embeds images.
+<audio>	= Embeds audio files.
+<video>	= Embeds video files.
+<source>	= Used inside <audio> or <video> for multiple file sources.
+
+---------------------------------List Tags---------------------------------------------------
+<ul>	= Unordered list (bullets).
+<ol>	= Ordered list (numbers).
+<li>	= List item.
+<dl>	= Description list.
+<dt>	= Term in a description list.
+<dd>	= Description of the term.
+
+---------------------------------Table Tags---------------------------------------------------
+<table>	= Creates a table.
+<tr>	= Table row.
+<th>	= Table header cell.
+<td>	= Table data cell.
+<thead>	= Table head section.
+<tbody>	= Table body section.
+<tfoot>	= Table footer section.
+<caption>	= Table caption/title.
+
+---------------------------------Form Tags---------------------------------------------------
+<form>	= Form container.
+<input>	= Input field (text, radio, checkbox, etc.).
+<label>	= Label for form input.
+<textarea>	= Multi-line text input.
+<button>	= Clickable button.
+<select>	= Dropdown menu.
+<option>	= Option in dropdown.
+<fieldset>	= Groups related elements.
+<legend>	= Title for a group of form elements.
+
+---------------------------------Other Useful Tags---------------------------------------------------
+<div>	= Generic block container (used for layout).
+<span>	= Generic inline container.
+<script>	= Embeds or links to JavaScript.
+<link>	= Links to external resources like CSS.
+<meta>	= Metadata (charset, viewport, etc.).
+<style>	= Internal CSS styling.
+<nav>	= Navigation links.
+<header>	= Top section of a page/section.
+<footer>	= Bottom section.
+<section>	= Defines a section of content.
+<article>	= Self-contained content.
+<aside>	= Side content (ads, tips, etc.).
+<main>	= Main content of a page.

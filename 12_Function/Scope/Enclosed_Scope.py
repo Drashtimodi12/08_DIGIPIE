@@ -13,3 +13,4 @@ def outer():
     inner()
 
 outer()
+# OP: 20

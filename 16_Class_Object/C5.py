@@ -16,3 +16,7 @@ R1 = Rectangle(15, 10)
 
 R1.area()
 print(f"Rectangle Length= {R1.length}, \nWidth={R1.width} \nArea of Rectangle = {R1.area()}")
+# OP:
+# Rectangle Length= 15, 
+# Width=10
+# Area of Rectangle = 150

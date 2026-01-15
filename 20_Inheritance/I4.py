@@ -33,3 +33,13 @@ c.area()
 s = Square()
 s.describe()
 s.area()
+# OP:
+# This is a geometric shape.
+
+# Enter redius of circle: 4
+# Circle Reduced is:  50.24
+
+# This is a geometric shape.
+
+# Enter side of square: 9
+# Square area is:  81.0

@@ -29,3 +29,11 @@ while t.is_alive():
     print("Thread Alive: True")
     time.sleep(0.5)
 print("Thread Alive: False")
+# OP:
+# Thread Alive: True
+# Thread Alive: True
+# Thread Alive: True
+# Thread Alive: True
+# Thread Alive: True
+# Thread Alive: True
+# Thread Alive: False

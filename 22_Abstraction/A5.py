@@ -24,3 +24,6 @@ class Fan(Appliance):
 f = Fan()
 f.turn_on()
 f.turn_off()
+# OP:
+# Fan is on.
+# Appliance is off.

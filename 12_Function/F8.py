@@ -7,3 +7,4 @@ def myfun(num):
     return fact
 
 print(myfun(5))
+# OP: 120

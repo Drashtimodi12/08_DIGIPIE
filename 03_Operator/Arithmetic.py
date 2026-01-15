@@ -1,36 +1,41 @@
-# Arithmetic Operators:-  + , - , * , / , % , // , **
+# Arithmetic Operators: +, -, *, /, %, **, //
+
+# Addition
+print(10 + 10)    # OP: 20
 
 
-a = float(input("Enter first number: "))
-b = float(input("Enter Second number: "))
+# String concatenation
+print("a" + "b")  # OP: ab
 
-print("Addition: ", a + b)
-print("Subtraction: ", a - b)
-print("Multiplication: ", a * b)
-print("Division: ", a / b)
-print("Modulo: ", a % b)
-print("Floor Division: ", a // b)
-print("Exponent: ", a ** b)
+# print("a" + 10)   # This will cause a TypeError because you cannot add a string and an integer directly.
 
-"""
-OP:
-Enter first number: 12
-Enter Second number: 3
-Addition:  15.0
-Subtraction:  9.0
-Multiplication:  36.0
-Division:  4.0
-Modulo:  0.0
-Floor Division:  4.0
-Exponent:  1728.0
-"""
 
-# Write a program to find the area of a circle using **.
-PI = 3.14
-area = PI * (a ** 2)
-print("Area of circle = ", area)
+# Mixing int and float results in a float (implicit type conversion)
+a = 10 + 10.00    
+print(type(a))  # OP: <class 'float'>
+print(a)        # OP: 20.0
 
-print("\n===========================\n")
 
-# Find cube of a number without using * two times (use **).
-print(f"Cube of {a}: {a**3}.")
+# Modulus: Returns the remainder
+print(10 % 3)     # OP: 1
+
+
+# Exponentiation
+print(10 ** 2)    # OP: 100
+
+
+# Floor Division
+print(16 // 3)    # OP: 5
+
+
+# Using variables for arithmetic operations
+x = 10
+y = 3
+
+print(x + y)  # Addition: 10 + 3 = 13
+print(x - y)  # Subtraction: 10 - 3 = 7
+print(x * y)  # Multiplication: 10 * 3 = 30
+print(x / y)  # Division: 10 / 3 = 3.3333 (returns a float)
+print(x // y)  # Floor Division: 10 // 3 = 3 (returns only the integer part)
+print(x % y)  # Modulus: Returns the remainder of 10 ÷ 3 (10 % 3 = 1)
+print(x ** y)  # Exponentiation: Raises 10 to the power of 3 (10^3 = 1000)

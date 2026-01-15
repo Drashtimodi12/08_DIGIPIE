@@ -13,3 +13,4 @@ pattern = r"[,]"
 mystr = "apple,banana,cherry,date"
 result = re.split(pattern, mystr)
 print(result)
+# OP: ['apple', 'banana', 'cherry', 'date']

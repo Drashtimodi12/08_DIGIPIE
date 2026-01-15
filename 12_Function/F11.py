@@ -4,3 +4,4 @@ def myfun(p):
     return p == p[::-1]
 
 print(myfun('POP'))
+# OP: True

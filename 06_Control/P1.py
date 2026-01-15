@@ -5,4 +5,9 @@ for i in range(1, 6):
         pass
     print(i)
 
-
+# OP:
+# 1
+# 2
+# 3
+# 4
+# 5

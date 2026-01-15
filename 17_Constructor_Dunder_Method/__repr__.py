@@ -13,3 +13,4 @@ p = Person("Drashti", 22)
 
 print(repr(p))  # calls __repr__
 # p               # also calls __repr__ in Python shell
+# OP: Person(name='Drashti', age=22)

@@ -20,3 +20,6 @@ obj = Dog(), Cat()
 
 for i in obj:
     i.sound()
+# OP:
+# Woof Woof!
+# Meow Meow!

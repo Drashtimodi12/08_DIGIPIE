@@ -3,3 +3,4 @@ class Demo:
         print("This is a Default Constructor")
 
 d = Demo()
+# OP: This is a Default Constructor

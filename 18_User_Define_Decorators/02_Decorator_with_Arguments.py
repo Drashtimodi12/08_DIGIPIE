@@ -14,6 +14,10 @@ def hello():
     print("Hello")
 
 hello()
+# OP:
+# Hello
+# Hello
+# Hello
 
 print("\n=============================\n")
 
@@ -46,3 +50,7 @@ def calculation(a, b):
 
 # Function call
 calculation(4, 5)
+# OP: 
+# Welcome
+# 4 + 5 = 9
+# Thank you

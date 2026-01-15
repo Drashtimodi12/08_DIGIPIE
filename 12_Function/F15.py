@@ -11,3 +11,4 @@ def myfun(n):
     return prime
 
 print(myfun(10))
+# OP: [2, 3, 5, 7]

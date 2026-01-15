@@ -7,3 +7,5 @@ def num(a):
         print(f"{a} is odd.")
 
 num(10)
+# OP:
+# 10 is Even.

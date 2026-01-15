@@ -26,3 +26,8 @@ bird_fly(s)
 
 p = Penguin()
 bird_fly(p)
+
+# OP:
+# Most birds can fly.
+# Sparrow flying in the sky.
+# Penguin is bird, but it cann't fly in the sky.

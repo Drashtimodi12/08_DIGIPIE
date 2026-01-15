@@ -13,4 +13,5 @@ import time
 for i in range(1, 6):
     print(i, end = " ", flush=True)
     time.sleep(1)       # Numbers change every 1 second in the same line
-# Without flush, Python may delay printing
+    # Without flush, Python may delay printing
+# OP: 1 2 3 4 5 

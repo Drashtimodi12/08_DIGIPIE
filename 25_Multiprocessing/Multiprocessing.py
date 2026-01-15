@@ -65,3 +65,9 @@ if __name__ == "__main__":
 
     # After both processes are done
     print("Both processes completed (Main process ends)")
+# OP:
+# Process 1 start
+# Process 2 start
+# Process 2 Finished
+# Process 1 Finished
+# Both processes completed (Main process ends)

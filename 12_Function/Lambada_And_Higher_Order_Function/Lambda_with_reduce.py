@@ -15,13 +15,13 @@ from functools import reduce
 num = [1, 2, 3, 4, 5, 6]
 a = reduce(lambda x, y : x + y, num)
 print(a)
-
+# OP:21
 print("\n=====================\n")
 
 b = lambda x, y : x * y
 num = [1, 2, 3, 4, 5, 6]
 print(reduce(b, num))
-
+# OP: 720
 print("\n=====================\n")
 
 # Use reduce() with a lambda function to find the product of all numbers in the list.
@@ -29,3 +29,4 @@ print("\n=====================\n")
 a = [1, 2, 3, 4, 5]
 product = reduce(lambda x, y : x * y, a)
 print(product)
+# OP: 120

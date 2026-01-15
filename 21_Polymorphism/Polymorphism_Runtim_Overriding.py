@@ -58,3 +58,7 @@ c = cl3()
 
 # Calls cl3's myfun() first → then cl2 → then cl1
 c.myfun(30)
+# OP:
+# Class cl3 function called.
+# Class cl2 function called.
+# Class cl1 function called.

@@ -39,7 +39,21 @@ class Designer(Employee):
 Dev = Developer()
 Dev.display_name()
 Dev.calculate_salary()
+# OP:
+# Enter your name: Drashti
+# Employee Name: Drashti
+# Enter your Diwali Bonus: 5000
+# Developer Total Salary: 8000.0
+
+
+
+
 
 Des = Designer()
 Des.display_name()
 Des.calculate_salary()
+# OP:
+# Enter your name: Daizy
+# Employee Name: Daizy
+# Enter your Diwali Bonus: 400
+# Designer Total Salary: 5400.0

@@ -16,4 +16,10 @@ async def main():
     await asyncio.gather(image("image1.jpg", 1), image("image2.jpg", 2), image("image3.jpg", 3))
 
 asyncio.run(main())
-
+# OP:
+# Start 1 number image to download..
+# Start 2 number image to download..
+# Start 3 number image to download..
+# Download image is image1.jpg.
+# Download image is image2.jpg.
+# Download image is image3.jpg.

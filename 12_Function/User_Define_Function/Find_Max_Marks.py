@@ -21,3 +21,4 @@ def a(dic):
 b = {'maths':30, 'science': 45, 'english': 38}
 sub, highest_mark = a(b)
 print(f"Subject with highest marks is {sub} with {highest_mark} marks.")
+# OP: Subject with highest marks is science with 45 marks.

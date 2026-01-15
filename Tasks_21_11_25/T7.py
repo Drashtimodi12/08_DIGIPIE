@@ -11,3 +11,6 @@ print(e1.company)
 e2 = Employee()
 print(e2.company)
 
+# OP:
+# ABC Ltd
+# ABC Ltd

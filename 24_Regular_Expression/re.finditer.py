@@ -18,3 +18,5 @@ result = re.finditer(pattern, mystr)
 
 for same in result:
     print("\n", same.group(), "starts at", same.start(), "ends at", same.end() )
+# OP:
+#  Hello starts at 14 ends at 19

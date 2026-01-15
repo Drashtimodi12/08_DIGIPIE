@@ -1,31 +1,39 @@
-"""
-Definition: A decorator is a special function that adds extra functionality to another function without 
-            modifying its actual code.
-        A decorator wraps another function and allows you to run code before or after the main function executes
+# Define a decorator function named 'before'
+def before(func) :
 
-We use a decorator with @decorator_name above a function.
-
-Why do we use decorators?
-    Add features to a function without modifying its original code
-    Clean and readable
-    Avoid rewriting the same code again and again
-    Good for logging, authentication, timing, access control, etc.
-"""
-
-def my_decorator(func):
-    def wrapper():
-        print("Before the function")
+    # Define an inner function 'wrap' that will wrap the original function
+    def wrap() :
+        # Print a message before calling the original function
+        print(f"Print BEFORE something....{func.__name__}")
+        # Call the original function
         func()
-        print("After the function")
-    return wrapper
+        # Print a message after calling the original function
+        print("AFTER somethnig...")
+    # Return the inner function 'wrap' as the decorated function
+    return wrap
 
-@my_decorator
-def greet():
-    print("Hello!")
+# Use the 'before' decorator to modify the 'test' function
+@before
+def test() :
+    # Print a message indicating that the 'test' function is being called
+    print("Printing something...")
 
-greet()
+# Use the 'before' decorator to modify the 'disp' function
+@before
+def disp() :
+    # Print a message indicating that the 'disp' function is being called
+    print("Display calling...")
 
-# OP:
-# Before the function
-# Hello!
-# After the function
+
+test()      # Call the decorated 'test' function
+# Output:
+# Print BEFORE something....test
+# Printing something...
+# AFTER somethnig...
+
+
+disp()      # Call the decorated 'disp' function
+# Output:
+# Print BEFORE something....disp
+# Display calling...
+# AFTER somethnig...

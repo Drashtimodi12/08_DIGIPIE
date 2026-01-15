@@ -19,3 +19,5 @@ class GamingLaptop(Laptop):
 
 obj = GamingLaptop()
 obj.power()
+# OP:
+# Gaming Laptop requires high power for graphics.

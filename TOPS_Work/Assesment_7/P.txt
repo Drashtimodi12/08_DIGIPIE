@@ -1,0 +1,40 @@
+Core Python Assessment Test  
+ 
+ Write a program to demonstrate the bank management Console based application. 
+ Prepare demonstration of Python bank management under software development principles and follow coding protocols
+ To implement application using of control statements as well as collection concept
+ In this application 2 modules involved (Banker , Customer)
+ Execution of the code following menu must be displayed.
+ Make sure each business logic is denoted with appropriate comments and make your code interactive and represent 
+clean and clear output on your console screen.
+
+ when user select option 1 then accept following details from user 
+ 
+ Banker can add customer , view customer , search customer , view all customer and total amounts in bank 
+ Use Functions concepts and modules – make programs more readable
+ Store all transactions in dictionary
+ 
+ View All Customers: 
+
+ Customer’s Menu as follows:  
+ Make sure this code implements using file handling concept 
+ create separate file for all business logics and make them reusable - use modules concepts for implements above logic
+ 
+ 
+After each operations always display menu: 
+ Make sure validation proper given – each options - display appropriate message if user enter invalid input and accept 
+values again and - use looping concepts and string inbuilt methods concepts in this logic implementation
+ Make sure code prevent from unexpected exception return to the previous menu and accept all details again.
+ 
+
+After entered notes output must be like following :  
+ Generate a log file and store all transaction details in that log file.
+ After each selection menu must be displayed asking for user input
+ After execution of each option confirmation message must be displayed.
+ Program should not be terminated till the user Exit it
+ Developer needs to test his product before launching it into the market
+ After completion this project upload it on GitHub
+ 
+ 
+o Upload all features in develop branch after completion all features 
+merge it with main branch

@@ -10,4 +10,4 @@ def myfun(n):
     return result
     
 print(myfun(6))
-
+# OP: [0, 1, 1, 2, 3, 5]

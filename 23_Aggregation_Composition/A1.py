@@ -16,12 +16,15 @@ class Car:
     def __init__(self):
         self.engine = Engine()
 
-    def stop(self):
+    def run(self):
         print("Car is running.")
         self.engine.start()
         self.engine.stop()
 
-E = Engine()
-c = Car(E)
-c.stop()
+c = Car()
+c.run()
 
+# OP:
+# Car is running.
+# Engine Started.
+# Engine Stopped.

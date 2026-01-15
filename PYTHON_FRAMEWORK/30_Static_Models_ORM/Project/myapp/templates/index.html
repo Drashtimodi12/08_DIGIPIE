@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+<!-- {% block 'title' %}
+Home
+{{title}}
+{% endblock %} -->
+
+{% block 'body' %}
+    <h1>Welcome to our website!</h1>
+    <hr>
+    <img src="{% static 'img/flower.jpg' %}" alt="img", width="500px", height="300px">
+{% endblock %}

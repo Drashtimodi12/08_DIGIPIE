@@ -1,10 +1,16 @@
 What Are Dunder Methods?
     Dunder = Double UNDERSCORE
     These are special methods in Python that start and end with __.
+They are also called:- Magic methods, Special methods
 
 Examples:- __init__, __str__, __len__, __add__
-
-They are also called:- Magic methods, Special methods
+        __init__(self, ...):    Constructor method, called when an instance of a class is created.
+        __str__(self):  Called by the str() function and print statement to get a string representation of the object.
+        __repr__(self):     Called by the repr() function and in the interactive interpreter to get a string representation 
+                            of the object that can be used to recreate the object.
+        __len__(self):  	Returns the length of the object
+        __add__(self, other):   Defines behavior for the addition operator +.
+        __eq__(self, other):    Defines behavior for the equality operator ==.
 
 Why Are Dunder Methods Used?
     They allow you to customize the behavior of your objects, such as:

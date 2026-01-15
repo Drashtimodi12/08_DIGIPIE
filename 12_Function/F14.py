@@ -6,3 +6,4 @@ def myfun(d):
             print(key, value)
 
 myfun({'d': 1, 'a': -46, 'x': 3.5})
+# OP: d 1

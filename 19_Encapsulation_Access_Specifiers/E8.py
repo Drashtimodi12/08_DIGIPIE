@@ -34,3 +34,9 @@ class ATM:
 a1 = ATM()
 a1.set_pin()
 a1.verify_pin()
+# OP:
+# Enter new pin: 9876
+# Pin changed succesfully...
+
+# Enter pin to verify: 9876
+# Pin is Correct.

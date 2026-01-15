@@ -25,6 +25,9 @@ class PayPal(Payment):
 
 cc = CreditCard()
 cc.pay(1000)
+# OP: Paid ₹1000 using Credit Card.
+
 
 pp= PayPal()
 pp.pay(2000)
+# OP: Paid ₹2000 using PayPal.

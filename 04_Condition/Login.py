@@ -17,3 +17,8 @@ elif username != user_input:
     print("Invalid username.")
 else:
     print("Wrong password.")
+
+# OP:
+# Enter username: admin
+# Enter passweord: python123
+# Login successful! Welcome to Python world.

@@ -16,3 +16,7 @@ for i in mystr:
         print(res)
     else:
         print("No Match")
+# OP: 
+# <re.Match object; span=(0, 9), match='12hello@$'>
+# <re.Match object; span=(0, 6), match='99Hi??'>
+# No Match

@@ -1,0 +1,78 @@
+<!DOCTYPE html> <!-- Declares the document as HTML5 -->
+<html lang="en"> <!-- Sets the language of the page to English -->
+
+<head>
+    <meta charset="UTF-8"> <!-- Sets character encoding to UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Makes the page responsive -->
+    <title>Form</title> <!-- Title of the web page shown in browser tab -->
+    <link rel="stylesheet" href="Tags.css"> <!-- Link to external CSS file -->
+
+    <style>
+        /* Inline CSS styling for input fields with class 'textField' */
+        .textField {
+            width: 150px;
+            height: 20px;
+            border: 1px solid red;
+            border-radius: 5px;
+            background-color: aquamarine;
+            color: brown;
+        }
+    </style>
+</head>
+
+<body> <!-- Body tag contains all visible content -->
+
+    <form action="Tags.html" method="post"> <!-- Form starts here; sends data to Tags.html using POST method -->
+        <fieldset> <!-- Groups related form elements -->
+            <legend>Registration Form</legend> <!-- Title for the group -->
+
+            <!-- Username input -->
+            <label for="uname">Username</label>
+            <input type="text" id="uname" name="uname" class="textField" placeholder="Enter username">
+            <br><br>
+
+            <!-- Email input -->
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" class="textField" placeholder="Enter email">
+            <br><br>
+
+            <!-- Password input -->
+            <label for="pass">Password</label>
+            <input type="password" id="pass" name="pass" class="textField" placeholder="Enter password">
+            <br><br>
+
+            <!-- Gender selection using radio buttons -->
+            <label>Gender</label>
+            <input type="radio" name="gender" value="male" id="male" checked>Male
+            <input type="radio" name="gender" value="female" id="female">Female
+            <br><br>
+
+            <!-- Language selection using checkboxes -->
+            <label>Language</label>
+            <input type="checkbox" name="lang" value="gij">Gujarati
+            <input type="checkbox" name="lang" value="eng">English
+            <input type="checkbox" name="lang" value="hindi">Hindi
+            <br><br>
+
+            <!-- Country selection using dropdown -->
+            <label>Country</label>
+            <select name="Country" id="country" class="textField">
+                <option value="1">India</option>
+                <option value="2">USA</option>
+                <option value="3">Canada</option>
+            </select>
+            <br><br>
+
+            <!-- Address text area -->
+            <label>Address</label>
+            <textarea name="Address" id="Address"></textarea>
+            <br><br>
+
+            <!-- Submit and Reset buttons -->
+            <input type="submit"> <!-- Submits the form -->
+            <input type="reset"> <!-- Resets all form fields -->
+        </fieldset>
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html> <!-- Declares HTML5 document -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!-- Character encoding -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- For responsiveness -->
+    <title>Table</title> <!-- Title shown on browser tab -->
+    <link rel="stylesheet" href="Table.css">
+</head>
+<body>  <!-- Body tag contains the visible content of the webpage -->
+    <table border="2" align="center" cellspacing="5" cellpadding="5">
+    <!-- Creates a table with:
+         border="2" → thickness of border
+         align="center" → centers the table on page (HTML5 deprecated)
+         cellspacing="5" → space between cells (external space)
+         cellpading="5" → (typo: should be 'cellpadding') space inside cells (internal padding)
+    -->
+        <thead>     <!-- Table header section, used for headings -->
+            <tr>    <!-- Table row -->
+                <th rowspan="2">ID</th>     <!-- Table header cell with rowspan="2" means it spans 2 rows vertically -->
+                <th rowspan="2">Name</th>
+                <th rowspan="2">Email</th>
+                <th colspan="2">Phone</th>  <!-- colspan="2" means this cell spans 2 columns horizontally -->
+            </tr>
+            <tr>
+                 <!-- These headers are under the "Phone" category -->
+                <th>Home</th>
+                <th>Office</th>
+            </tr>
+        </thead>
+        <tbody>     <!-- Table body section contains actual data -->
+
+            <tr>
+                <td rowspan="2">1</td>  <!-- Cell content spans 2 rows for same ID -->
+                <td rowspan="2">Farukh</td>
+                <td>farukh@gmail.com</td>
+                <td rowspan="2">7485968574</td>
+                <td rowspan="2">7485968574</td>
+            </tr>
+            <tr>
+                <td>farukh@yahoo.com</td>   <!-- Second email for the same person in second row -->
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Akash</td>
+                <td>Akash@gmail.com</td>
+                <td>4565987898</td>
+                <td>4565987898</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Rudra</td>
+                <td>rudra@gmail.com</td>
+                <td>7485968574</td>
+                <td>7485968574</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Drashti</td>
+                <td>drashti@gmail.com</td>
+                <td>748596857</td>
+                <td>748596857</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Sagar</td>
+                <td>sagar@gmail.com</td>
+                <td>5263524152</td>
+                <td>748596857</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Anchor tag creates a clickable link that opens Instagram -->
+    <a href="https://www.instagram.com">Instagram</a>
+    
+</body>
+</html>

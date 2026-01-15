@@ -29,7 +29,9 @@ class Human:
 
 h = Human()
 h.live()
-
+# OP:
+# Human is living...
+# Heart is beating...
 
 """
 ✔ Key Checks:

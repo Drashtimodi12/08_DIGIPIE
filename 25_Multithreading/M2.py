@@ -15,3 +15,8 @@ t1.start()
 
 t1.join()
 print("Main thread finished")
+# OP:
+# Hello
+# Hello
+# Hello
+# Main thread finished

@@ -1,0 +1,114 @@
+------------Example 1: Class and Object with Constructor & Attributes---------------
+In this example, we define a class Student that initializes attributes using a constructor (__init__).
+
+
+# Define a class named Student
+class Student:
+    # Constructor to initialize student details
+    def __init__(self, name, roll_no, grade):
+        self.name = name
+        self.roll_no = roll_no
+        self.grade = grade
+
+    # Method to display student details
+    def display_info(self):
+        print(f"Student Name: {self.name}, Roll No: {self.roll_no}, Grade: {self.grade}")
+
+# Creating objects of Student class
+s1 = Student("Alice", 101, "A")
+s2 = Student("Bob", 102, "B")
+
+# Calling method to display student details
+s1.display_info()
+s2.display_info()
+
+
+
+Output:- 
+Student Name: Alice, Roll No: 101, Grade: A
+Student Name: Bob, Roll No: 102, Grade: B
+
+
+
+
+
+----------Example 2: Class with Instance and Class Method-----------------
+Here, we use instance methods (self) and class methods (@classmethod).
+
+# Define a class named Employee
+class Employee:
+    company_name = "Tech Corp"  # Class attribute (common for all employees)
+
+    # Constructor to initialize employee details
+    def __init__(self, emp_id, name, salary):
+        self.emp_id = emp_id
+        self.name = name
+        self.salary = salary
+
+    # Instance method to display employee details
+    def display(self):
+        print(f"ID: {self.emp_id}, Name: {self.name}, Salary: {self.salary}, Company: {self.company_name}")
+
+    # Class method to update company name
+    @classmethod
+    def update_company(cls, new_name):
+        cls.company_name = new_name
+
+# Creating employee objects
+e1 = Employee(101, "John", 50000)
+e2 = Employee(102, "Emma", 60000)
+
+# Display details before updating company name
+e1.display()
+e2.display()
+
+# Update company name using class method
+Employee.update_company("Innovate Solutions")
+
+# Display details after updating company name
+e1.display()
+e2.display()
+
+
+Output:- 
+ID: 101, Name: John, Salary: 50000, Company: Tech Corp
+ID: 102, Name: Emma, Salary: 60000, Company: Tech Corp
+ID: 101, Name: John, Salary: 50000, Company: Innovate Solutions
+ID: 102, Name: Emma, Salary: 60000, Company: Innovate Solutions
+
+
+
+
+
+-------------Example 3: Class with Static Method and Constructor Attributes------------------
+This example includes a static method (@staticmethod), which does not use self or cls.
+
+# Define a class named Calculator
+class Calculator:
+    # Constructor to initialize two numbers
+    def __init__(self, num1, num2):
+        self.num1 = num1
+        self.num2 = num2
+
+    # Instance method to perform addition
+    def add(self):
+        return self.num1 + self.num2
+
+    # Static method to show a greeting message
+    @staticmethod
+    def greet():
+        print("Welcome to the Calculator Program!")
+
+# Calling static method before creating objects
+Calculator.greet()
+
+# Creating object of Calculator class
+calc = Calculator(10, 20)
+
+# Calling instance method
+print("Addition:", calc.add())
+
+
+Output:- 
+Welcome to the Calculator Program!
+Addition: 30

@@ -23,3 +23,5 @@ if result:
     print(result.group())  # whole matched string
 else:
     print("No match found")
+# OP:
+# abc123

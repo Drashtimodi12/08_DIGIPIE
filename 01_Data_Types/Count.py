@@ -15,6 +15,7 @@ for k, v in item_count.items():
     print(f"{k}: {v}")    
 
 
+# OP:
 # int: 2
 # str: 1  
 # float: 1

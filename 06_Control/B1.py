@@ -7,8 +7,14 @@ while True:
         break
     else:
         print("Welcome")
+# OP:
+# Enter 1 or -1: 1
+# Welcome
+# Enter 1 or -1: -1
+# Stope the program...
 
 
+print("\n-----------------------\n")
 
 
 # Print the list of entered numbers.
@@ -21,3 +27,8 @@ while True:
     else:
         a.append(num)
 print("Numbers entered:", a)
+# OP:
+# Enter a number (or -1 to stop): 3
+# Enter a number (or -1 to stop): -1
+# Stope the program...
+# Numbers entered: [3]

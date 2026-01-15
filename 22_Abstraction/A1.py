@@ -29,8 +29,15 @@ class Bike(Vehicle):
 C = Car()
 C.start()
 C.stop()
+# OP:
+# Car has started with a key ignition.
+# Stopped Vehicle.
+
 
 B = Bike()
 B.start()
 B.stop()
-    
+
+# OP:
+# Bike has started with self-start button.
+# Stopped Vehicle.

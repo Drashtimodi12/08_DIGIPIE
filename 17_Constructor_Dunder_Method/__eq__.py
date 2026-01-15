@@ -17,3 +17,4 @@ s2 = Student(90)
 
 # s1 == s2 calls s1.__eq__(s2)
 print(s1 == s2)
+# OP: True

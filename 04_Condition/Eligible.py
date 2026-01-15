@@ -12,3 +12,7 @@ elif age >= 25:
     print("Eligible for voting and driving.")
 else: 
     pass
+
+# OP:
+# Enter your age: 20
+# Eligible for voting only.

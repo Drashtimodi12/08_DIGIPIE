@@ -22,3 +22,7 @@ bu = Bus()
 
 for obj in (c, b, bu):
     obj.start()
+# OP:
+# Car have 4 wheels
+# Car have 2 wheels
+# Car have 6 wheels

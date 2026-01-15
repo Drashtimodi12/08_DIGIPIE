@@ -43,3 +43,8 @@ def main():
 
 # Running the synchronous program
 main()  # Total time = 2 sec + 2 sec = 4 seconds
+# OP:
+# Start to perform task...
+# Task 1 Perform
+# Task 2 Perform
+# End all task...

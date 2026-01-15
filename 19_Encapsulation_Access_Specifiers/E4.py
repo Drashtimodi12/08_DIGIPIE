@@ -44,3 +44,8 @@ s1 = Student("Drashti", 76)
 print(f"Name: {s1.get_name()}")
 s1.set_mark()
 s1.grade()
+# OP:
+# Name: Drashti
+# Enter total Marks: 76
+# Your marks is: 76.0
+# Drade B.

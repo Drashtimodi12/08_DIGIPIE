@@ -17,3 +17,4 @@ n2 = Number(10)
 
 # When we use + between objects, __add__ method gets triggered
 print(n1 + n2)
+# OP: 15

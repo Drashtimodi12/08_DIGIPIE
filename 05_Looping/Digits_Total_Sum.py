@@ -12,6 +12,10 @@ for i in num:
     
 print("Total number: ", total_digigts)
 print("Sum of Digits: ", sum_num)
+# OP:
+# Enter digits: 12
+# Total number:  2
+# Sum of Digits:  3
 
 print("\n========================\n")
 
@@ -27,3 +31,7 @@ while temp > 0:
     
 print("Total number: ", total_digit)
 print("Sum of Digits: ", sum_num)
+# OP:
+# Enter digits: 5
+# Total number:  1
+# Sum of Digits:  5

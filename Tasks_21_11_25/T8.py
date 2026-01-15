@@ -11,3 +11,5 @@ c1 = Car('Tesla', 'Black')
 c1.color = 'Black'
 
 print(f"{c1.brand} is most commanly sold {c1.color} color car.")
+# OP:
+# Tesla is most commanly sold Black color car.

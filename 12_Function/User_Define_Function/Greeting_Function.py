@@ -13,3 +13,8 @@ def msg(name = 'Drashti'):
     print(f"Good morning {name}!")
 msg()
 msg('Daizy')
+
+# OP:
+# Good Morning, Drashti!.
+# Good morning Drashti!
+# Good morning Daizy!

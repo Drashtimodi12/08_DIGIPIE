@@ -7,3 +7,4 @@ def myfun(lst):
     return [x for x in lst if x % 2 == 0]
 
 print(myfun([3,6,2,9,1]))
+# OP: [6, 2]

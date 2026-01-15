@@ -17,4 +17,6 @@ class Rectangle:
 r1 = Rectangle(12, 6)
 print(r1.area())
 print(r1.perimeter())
-    
+# OP:
+# Area of rectangle: 72.
+# Perimeter of rectangle: 30.

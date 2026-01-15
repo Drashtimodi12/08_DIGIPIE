@@ -62,3 +62,15 @@ l1 = Login()
 l1.set_username()
 l1.set_password()
 l1.check_login()
+# OP:
+# Enter username: admin
+# Enter password: admin@123
+# Password updated successfully!
+
+
+# Enter Valid information to login.
+
+# Enter username: admin
+# Enter Password: admin@123
+
+# Login Successful. Welcome!

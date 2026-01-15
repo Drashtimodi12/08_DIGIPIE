@@ -1,0 +1,393 @@
+(myenv) PS C:\PYTHON_PROGRAM\PYTHON_PROJECT\ReportCard> cd .\myapp\
+(myenv) PS C:\PYTHON_PROGRAM\PYTHON_PROJECT\ReportCard\myapp> py .\data.py
+Jessica Wheeler
+Jeremy Bryant
+Tiffany Vaughan
+Charles Hunter
+Kristen Smith
+Sheila Lee
+Melissa Hammond
+Hannah Bennett
+Kelly Lewis
+Miguel Morris
+Jennifer Merritt MD
+Karen Marsh
+Ashley Schultz
+Maria Clark
+Stephen Casey
+Brandon Page
+Alexander Peterson
+Michelle Smith
+Isaac Hanson
+Carlos Turner
+Charles Smith
+Ryan Miller
+Krista Foster
+Wendy Huerta
+Christopher Williams
+James Holt
+Lauren Martinez
+James Hudson
+Miranda Perez
+Christina Shaffer
+Gregory Rivera
+Martin Wolf
+Tina Lawson
+William Thompson
+Marcus Gonzalez
+Pamela Roberts
+Lisa Richardson
+Melissa Roberts
+Nicole Hodge
+Jose Miller
+Jessica Lewis
+Erica Nguyen
+James Kirk
+Melissa Lee
+Jessica Hart
+Anna Elliott
+Jose Evans
+Colton Miller
+William Perez
+
+(myenv) PS C:\PYTHON_PROGRAM\PYTHON_PROJECT\ReportCard\myapp> py .\data.py
+Jason Garcia hmalone@example.org
+Dominic Sullivan simsmelissa@example.org
+Denise Rodriguez jason85@example.org
+Matthew Mcguire kevingarcia@example.com
+Christina Porter kingkathleen@example.org
+Dawn Gonzales william88@example.org
+Deborah Moore bbrown@example.com
+Elizabeth Morris jeffrey83@example.com
+Jennifer Clark kyle92@example.org
+Billy Jackson xphillips@example.net
+Kathy Brown tlewis@example.com
+Amber Koch sarah45@example.net
+Teresa Thomas dherrera@example.org
+Michael Jones raymondhamilton@example.com
+Ryan Banks williamstimothy@example.net
+Thomas Wilson bsweeney@example.net
+Mary Ramsey browneric@example.org
+Michael Norman castillolaurie@example.org
+Joanna Pena richardholly@example.net
+Robert Cook travislane@example.net
+Hannah Smith aortiz@example.org
+Carly Kelly nicholaswest@example.org
+Holly Parks joelmiller@example.net
+Jimmy Cole yhouse@example.net
+Tony Moss davidlamb@example.com
+Tony Johnson alexander29@example.com
+Robert Duncan turnerhaley@example.org
+William Smith carrillogeorge@example.org
+Andrew Campbell eschneider@example.com
+Nicole Kirk brian19@example.com
+Brittany Hopkins jamespowell@example.net
+Marco Ford michael07@example.com
+Jamie Payne pwhite@example.org
+Jason Diaz tduarte@example.net
+Barbara Johnson cooperkatie@example.org
+Stephanie Greene bwhite@example.org
+Sara Bowers katherinespencer@example.org
+Jennifer Smith hallrodney@example.com
+Brianna Gonzalez hryan@example.org
+Eric Rodriguez butlerseth@example.org
+Olivia Sanchez brownnathan@example.org
+Michelle Nash jacqueline57@example.com
+James Carson tateangela@example.com
+Mckenzie Thomas jonathan03@example.net
+Robin Barrett christopher47@example.net
+Kathryn Jackson owensangelica@example.net
+Ashley Gray emily20@example.net
+Richard Cole torresmichael@example.org
+Kimberly Wood douglaslinda@example.com
+(myenv) PS C:\PYTHON_PROGRAM\PYTHON_PROJECT\ReportCard\myapp> py .\data.py
+Kristin Maldonado jillianmartinez@example.net 20
+Carmen York huberrobert@example.net 23
+Victoria Miller edrake@example.com 18
+David Brown mortonchristopher@example.net 24
+Christie Ortega diane05@example.net 21
+James Mendoza tinapatterson@example.net 18
+Julie Wright DDS tamijohns@example.net 21
+Michael Parker barbarakelly@example.net 21
+Melissa Mathis dylanali@example.net 20
+Karen Jenkins megan04@example.org 23
+Charles Rodriguez III harrisdavid@example.com 23
+Derrick Barker shannon84@example.com 23
+Robert Mayer smithkyle@example.net 18
+Dennis Robinson derek52@example.net 25
+Calvin Rivera ijackson@example.com 24
+Devon Villa christopheranderson@example.net 19
+Christopher Richardson housecrystal@example.org 18
+Carol Pena pmarquez@example.net 21
+Courtney Sherman dramirez@example.com 24
+Michael Bender zacharywilliams@example.org 25
+Robert Reyes lawsonmichael@example.org 21
+Cory Knapp ddunn@example.com 19
+Brandon Orr rachel95@example.org 24
+Bobby Martin qcole@example.net 25
+Jorge Nash anthonymcintosh@example.net 24
+Jon Medina reneebarrett@example.com 20
+Tammy Jones vmcpherson@example.com 20
+Carolyn Brown jimmymoon@example.net 18
+Brandon Lee qmartin@example.com 24
+Kristen Parks cathy16@example.net 24
+Matthew Dominguez amberbell@example.net 19
+Robert Green alex41@example.org 23
+Michaela Soto ydean@example.com 24
+Brendan Wilson timothy60@example.net 24
+Patricia Hays james86@example.com 23
+Tyler Wilson nathannelson@example.com 20
+Colton Poole chavezdouglas@example.com 23
+Kelsey Wagner mparsons@example.com 20
+Lisa Grimes uperez@example.net 18
+Samantha Craig thomassteven@example.net 22
+Diana Barnes gutierrezdaniel@example.net 20
+Kimberly Stephens uoconnor@example.com 19
+Gregory Townsend travis39@example.com 23
+Heather Hopkins murraybrianna@example.com 20
+Jose Herman george07@example.com 25
+Danielle Brown mpark@example.org 19
+
+
+(myenv) PS C:\PYTHON_PROGRAM\PYTHON_PROJECT\ReportCard\myapp> cd ..
+
+
+(myenv) PS C:\PYTHON_PROGRAM\PYTHON_PROJECT\ReportCard> py .\manage.py shell
+11 objects imported automatically (use -v 2 for details).
+
+Python 3.10.7 (tags/v3.10.7:6cc6b13, Sep  5 2022, 14:08:36) [MSC v.1933 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> from myapp import data
+>>> data.generate()
+Amy White jessicajohnson@example.org 25
+Norma Mason forbesjames@example.net 22
+Terry Liu geraldbailey@example.org 19
+Ann Li joelgreen@example.net 22
+Brian Mcpherson lisaduran@example.net 19
+Paul Allen bdavis@example.com 18
+Dalton Hunter istewart@example.org 24
+Travis Reilly parsonsbilly@example.org 22
+William Bell mercadochristopher@example.com 19
+Steve Young cochranricky@example.org 23
+Crystal West zwilliams@example.com 23
+James Melton wandafarley@example.com 23
+Pamela Ball jefferyryan@example.com 20
+Erica Lawson brianbennett@example.net 20
+Kristina Johnson robertwilliams@example.org 22
+Sheila Gomez andreachavez@example.org 20
+Sandra Moore mikeharvey@example.net 24
+John Thomas john55@example.org 23
+Patricia Hayes christinakrueger@example.net 22
+Haley Nguyen holson@example.org 19
+Ronnie Turner armstrongnoah@example.org 18
+Kayla Taylor averymary@example.net 21
+Gloria Johnson gwalker@example.net 21
+John Snyder alex74@example.com 22
+Ronald Gonzalez calderonmark@example.net 21
+Angela Peterson rwright@example.org 18
+Stephanie Jackson abarnes@example.org 19
+Douglas Simmons xwilliams@example.net 24
+Alexander Mcdonald parkerandrew@example.com 21
+Julie Peterson paulortiz@example.net 20
+Peter Everett sblanchard@example.org 24
+Ashley White chelseygomez@example.com 21
+Dr. Julie Carter mendozajoshua@example.com 23
+Laura Gordon poncealexander@example.com 20
+Marissa Martinez julia26@example.com 22
+Jerry Rangel randy66@example.org 18
+Kevin Johnson eric99@example.com 23
+David Martin kpatel@example.com 25
+Billy Elliott hansenmary@example.net 22
+Michael Cross xcoleman@example.net 23
+Robert Collins robert84@example.net 21
+Jessica Owens michael11@example.net 18
+Eduardo Wade foleyebony@example.com 23
+Anna Smith kbuckley@example.com 24
+William Bradshaw eshaffer@example.net 20
+Tiffany Smith rachel00@example.com 19
+Vanessa Anthony jacob51@example.net 22
+Lauren Terrell williamsnicole@example.org 24
+Erin Brown oellis@example.org 20
+>>> exit()
+(myenv) PS C:\PYTHON_PROGRAM\PYTHON_PROJECT\ReportCard> py .\manage.py shell
+11 objects imported automatically (use -v 2 for details).
+
+Python 3.10.7 (tags/v3.10.7:6cc6b13, Sep  5 2022, 14:08:36) [MSC v.1933 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> from myapp import data
+>>> data.generate()
+Scott Tanner kshelton@example.org 23 Computer Engineering
+Nicole Peters hjones@example.net 18 Computer Engineering
+Karen Allen maria70@example.org 25 Computer Engineering
+Joshua Shaw judy51@example.net 23 Computer Engineering
+Laura Nelson kathryn89@example.com 23 Computer Engineering
+Kristina Williams olsonbethany@example.net 22 Computer Engineering
+Ryan Floyd leejoshua@example.com 20 Computer Engineering
+Shannon Caldwell bettyhardy@example.org 22 Computer Engineering
+Douglas Frey baileyjack@example.org 24 Computer Engineering
+Barbara Garcia james70@example.com 21 Computer Engineering
+Jennifer Nunez qhuang@example.net 18 Computer Engineering
+Paul Young rossjeffrey@example.org 22 Computer Engineering
+Jennifer Adams phobbs@example.org 22 Computer Engineering
+Ian Taylor kathleen27@example.net 23 Computer Engineering
+Crystal Barnes brandilam@example.com 19 Computer Engineering
+Elizabeth Haynes tracy59@example.net 24 Computer Engineering
+Johnny Reese sarahmarshall@example.com 19 Computer Engineering
+Brittany Winters clarkscott@example.org 18 Computer Engineering
+Nicole Williams tmckinney@example.com 25 Computer Engineering
+Zachary Hudson kevin68@example.net 23 Computer Engineering
+James Reyes katrinamullins@example.com 25 Computer Engineering
+Robin Parker asimmons@example.com 21 Computer Engineering
+Peter Calhoun hillandrew@example.org 23 Computer Engineering
+Kevin Montes zmoore@example.org 25 Computer Engineering
+Jeffrey Page sampsondavid@example.com 25 Computer Engineering
+Angela Little sara55@example.net 22 Computer Engineering
+Daniel Mitchell nolson@example.org 21 Computer Engineering
+Jacqueline Roth xhammond@example.com 25 Computer Engineering
+Caroline Hunter sandra43@example.org 22 Computer Engineering
+Gabriel Werner jeffrey53@example.org 24 Computer Engineering
+Andrea Moore kimberlywhite@example.net 25 Computer Engineering
+Sylvia Martin youngmatthew@example.org 23 Computer Engineering
+Mallory Floyd kimberlyrosales@example.com 25 Computer Engineering
+Ethan Foster moralesjoel@example.com 18 Computer Engineering
+David Ross scottturner@example.org 18 Computer Engineering
+Jose Frost franciscolleen@example.net 24 Computer Engineering
+Christopher Smith wmoran@example.org 22 Computer Engineering
+Kristine Rodriguez ashleydavis@example.com 19 Computer Engineering
+Kathleen Cooper imullen@example.net 19 Computer Engineering
+Kyle Mccarty lance43@example.com 24 Computer Engineering
+Matthew Dunn Jr. dreese@example.org 22 Computer Engineering
+Samantha Dorsey davidblake@example.org 18 Computer Engineering
+Richard Harris smithcourtney@example.com 23 Computer Engineering
+Timothy Dickerson medinasteven@example.net 19 Computer Engineering
+Miguel Powell alicia43@example.org 23 Computer Engineering
+Rhonda Gutierrez kathyparker@example.org 25 Computer Engineering
+Ashley Adams elijah09@example.net 19 Computer Engineering
+Mark Young bobbytaylor@example.org 25 Computer Engineering
+Danny Evans cassandra18@example.org 22 Computer Engineering
+>>> exit()
+(myenv) PS C:\PYTHON_PROGRAM\PYTHON_PROJECT\ReportCard> py .\manage.py shell
+11 objects imported automatically (use -v 2 for details).
+
+Python 3.10.7 (tags/v3.10.7:6cc6b13, Sep  5 2022, 14:08:36) [MSC v.1933 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> from myapp import data
+>>> data.generate()        
+Jennifer Franklin michael64@example.com 19 Information Technology
+Michael Cruz emilygonzalez@example.org 23 Computer Engineering
+Paula Grant restrada@example.com 18 Computer Engineering
+Adam Jackson marthajones@example.com 20 Information Technology
+Ryan Mccarthy gtaylor@example.net 21 Civil Engineer
+Michael Schwartz kimberly29@example.org 23 Architecture
+Sarah Martinez fnelson@example.net 24 Civil Engineer
+Laurie Wolfe davidmccarthy@example.net 19 Architecture
+Adriana Curtis patrickpark@example.org 24 Information Technology
+Walter Serrano justin93@example.com 21 Robotic's Engineer
+Joshua Miller derek50@example.net 22 Civil Engineer
+Shannon Wilkins aprilbennett@example.net 20 Civil Engineer
+Dalton Gilbert npatton@example.net 21 Architecture
+Andrea Ayers jamesshelley@example.org 22 Architecture
+David Mckee gallowaylarry@example.org 23 Computer Engineering
+Julie Taylor kevin40@example.org 24 Civil Engineer
+Heather Spencer georgedunn@example.net 25 Architecture
+Samantha Burnett chavezelizabeth@example.net 23 Civil Engineer
+Erika Mcpherson davidaguilar@example.org 20 Information Technology
+Clayton Clayton blloyd@example.net 20 Information Technology
+Alexander Osborne hpatel@example.com 19 Architecture
+Anthony Gutierrez cynthialucas@example.com 23 Civil Engineer
+Ronald Miranda james78@example.net 24 Information Technology
+Bradley Ellis amartinez@example.org 21 Computer Engineering
+Cassidy Carter joshua05@example.org 24 Civil Engineer
+Eric Phillips wsimpson@example.com 18 Computer Engineering
+Hannah Bradley blacklinda@example.org 19 Architecture
+Catherine Molina bwilliams@example.net 20 Robotic's Engineer
+Vanessa Trevino jay14@example.org 23 Architecture
+Kelly Fisher yjackson@example.com 21 Robotic's Engineer
+Steven Jones lauriecarr@example.net 23 Robotic's Engineer
+Charles Taylor eric93@example.com 19 Architecture
+Justin King francisjulian@example.com 18 Information Technology
+Bryan Hester drew07@example.org 20 Robotic's Engineer
+Courtney Howe tthomas@example.com 18 Architecture
+Edward Kirby pbrown@example.net 18 Electrical Engineer
+Derrick Jacobs dhayes@example.com 19 Electrical Engineer
+Cassandra Marshall katelyn38@example.org 23 Electrical Engineer
+Jessica Jarvis galvancraig@example.com 18 Civil Engineer
+Michael Byrd fuentesshane@example.org 18 Civil Engineer
+Gary Ellison peggyolson@example.org 22 Architecture
+Jennifer Cain amyjoseph@example.com 24 Civil Engineer
+Emily Sweeney bkim@example.net 20 Architecture
+Jacob Webster davidchavez@example.org 18 Civil Engineer
+Melissa Flores cisnerosgreg@example.org 23 Computer Engineering
+Mary Lee christinayoung@example.org 18 Architecture
+Laurie Jones mccormickolivia@example.net 23 Information Technology
+Robert Robinson gailrobinson@example.com 20 Robotic's Engineer
+Gavin Reed janetglover@example.org 21 Architecture
+Patricia Snow jeffbaird@example.com 23 Architecture
+>>> exit()
+
+
+(myenv) PS C:\PYTHON_PROGRAM\PYTHON_PROJECT\ReportCard> py .\manage.py shell
+11 objects imported automatically (use -v 2 for details).
+
+Python 3.10.7 (tags/v3.10.7:6cc6b13, Sep  5 2022, 14:08:36) [MSC v.1933 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> from myapp import data
+>>> data.generater()
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+AttributeError: module 'myapp.data' has no attribute 'generater'
+>>> data.generate()        
+Antonio Ball chelsea56@example.org 22 Electrical Engineer STD311
+Derrick Bowman vromero@example.net 18 Computer Engineering STD964
+David Reed istout@example.org 23 Architecture STD729
+Andrea Walker powellnathan@example.net 25 Information Technology STD437
+Sean Woodward christopherortiz@example.net 22 Architecture STD291
+Evan Copeland belljessica@example.org 22 Civil Engineer STD355
+Janice Johnson wellsrichard@example.org 18 Computer Engineering STD378
+Aaron Hicks josephlopez@example.com 21 Civil Engineer STD898
+Brandon Shaw monicacortez@example.org 23 Robotic's Engineer STD718
+Kiara Black molinahelen@example.net 21 Computer Engineering STD604
+Nicholas Nixon baileywayne@example.com 24 Electrical Engineer STD435
+Zachary Thomas duncankristen@example.net 18 Computer Engineering STD704
+Brian Alvarado davisrichard@example.org 23 Electrical Engineer STD834
+Troy Brooks stephanie10@example.com 25 Robotic's Engineer STD546
+Karen Yates rebecca41@example.org 20 Electrical Engineer STD866
+Jessica Jackson samueljohnson@example.com 24 Architecture STD134
+Randy Wright michael15@example.org 22 Architecture STD299
+Curtis Perez tchung@example.org 22 Information Technology STD692
+Selena Lopez william09@example.org 19 Information Technology STD369
+Michael Gutierrez jaredschaefer@example.org 23 Architecture STD464
+Kevin Medina rodriguezsteven@example.org 25 Computer Engineering STD478
+Kristin Hartman thomasjennifer@example.net 19 Architecture STD904
+Robert Dudley jennifermosley@example.net 24 Architecture STD620
+Crystal Jenkins celliott@example.net 25 Electrical Engineer STD985
+Mark Rogers kathleenjones@example.com 21 Computer Engineering STD308
+Susan Huber kristina42@example.org 24 Information Technology STD946
+Scott Watson emily62@example.net 23 Civil Engineer STD225
+Shawn Robinson cmaynard@example.net 25 Civil Engineer STD955
+Maria Ward stonecatherine@example.com 20 Electrical Engineer STD556
+Adam Bates meganriley@example.com 21 Electrical Engineer STD165
+Earl Salinas lhancock@example.org 25 Civil Engineer STD180
+Charles Garrett buchananalex@example.com 23 Robotic's Engineer STD454
+Jasmine Porter deanna73@example.net 20 Architecture STD283
+Jeffrey Fernandez wilsontracie@example.org 25 Robotic's Engineer STD412
+Roberto Hamilton sylvia85@example.org 22 Architecture STD300
+Ashley Anderson lauriewallace@example.net 25 Information Technology STD195
+Robin Pena nicholas36@example.org 19 Information Technology STD410
+Steven Reyes mary19@example.com 20 Computer Engineering STD485
+Joel Fox weeksanthony@example.com 19 Civil Engineer STD241
+Steve Wright alexandra31@example.com 19 Architecture STD679
+Jeffery Jackson drew53@example.org 19 Computer Engineering STD396
+David Edwards kimberlytorres@example.net 22 Electrical Engineer STD795
+David Lin joshua18@example.net 25 Electrical Engineer STD802
+Christine Mendoza kenneth14@example.org 20 Architecture STD806
+Lynn Thomas peterskaren@example.net 25 Civil Engineer STD324
+Nicole Brown huynhangela@example.org 25 Robotic's Engineer STD809
+Frederick Gonzalez omar71@example.com 25 Robotic's Engineer STD918
+Michael Smith donnasingh@example.com 23 Electrical Engineer STD910
+Frank Griffin powellvirginia@example.org 25 Civil Engineer STD624
+David Pittman xmoore@example.com 21 Electrical Engineer STD743

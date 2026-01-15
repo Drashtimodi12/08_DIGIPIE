@@ -27,3 +27,4 @@ replace = "*"
 mystr = "My goal to learn Python Language"
 result = re.sub(pattern, replace, mystr)
 print(result)
+# OP: My g**l t* l**rn Pyth*n L*ng**g*

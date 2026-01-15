@@ -17,3 +17,6 @@ b = a
 print(b)
 a = 30
 print(a)
+# OP:
+# 10
+# 30

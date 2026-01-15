@@ -22,8 +22,14 @@ def inc():
     print(f"number is: {count}")
 inc()
 inc()
+# OP:
+# number is: 1
+# number is: 2
 
 print("\n===========================\n")
+
+
+
 
 
 # global Keyword → Needed if you want to modify a global variable inside a function.

@@ -21,3 +21,7 @@ employees = [Developer(), Designer(), Tester()]
 
 for emp in employees:
     emp.work()
+# OP:
+# Writes Code
+# Creates UI
+# Tests software

@@ -8,3 +8,6 @@ for i in a:
         break
     else:
         print(i)
+# OP:
+# apple
+# banana

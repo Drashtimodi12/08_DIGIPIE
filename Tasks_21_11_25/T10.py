@@ -13,3 +13,4 @@ class Fruit:
 f1 = Fruit('Apple', 'sweet')
 
 print(f1)
+# OP: Apple tastes sweet.

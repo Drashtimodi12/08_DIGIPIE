@@ -37,3 +37,8 @@ t2.join()
 t3.join()
 
 print("All threads finished! (Main thread ends)")
+# OP:
+# Task 1 completed after 1 seconds
+# Task 2 completed after 1 seconds
+# Task 3 completed after 4 seconds
+# All threads finished! (Main thread ends)

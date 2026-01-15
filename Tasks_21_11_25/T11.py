@@ -20,3 +20,7 @@ class BankAccount:
 b = BankAccount(1000)
 b.deposit(200)
 print("Balance using getter:", b.get_balance())
+# OP:
+# Amount deposited: 200 Rupees.
+# Current balance: 1200 Rupees.
+# Balance using getter: 1200

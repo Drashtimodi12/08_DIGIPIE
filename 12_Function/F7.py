@@ -9,3 +9,4 @@ def myfun(a):
     return count
 
 print(myfun('my name is drashti'))
+# OP: 5

@@ -23,4 +23,7 @@ p = Professor()
 p.teach()
 p.research()
 p.guide()
-
+# OP: 
+# I work as a teacher to tech student.
+# I am researcher to research student growth.
+# I am professor to see teacher and researcher work properly...

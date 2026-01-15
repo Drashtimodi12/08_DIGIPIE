@@ -8,3 +8,7 @@ def demo():
         print("Finally Block Executed. ")
 
 d = demo()
+# OP:
+# Enter integer number: -2
+# You enter:  -2
+# Finally Block Executed.

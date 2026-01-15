@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P4</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <!-- doctor profile page -->
+    <div class="container" style="text-align: center">
+        <h1>Doctor Profile</h1>
+        <br>
+        <div class="profile">
+            <img src="{% static 'img/Female-1.jpg' %}" alt="Doctor" class="profile-image" height="200" width="200">
+            <div class="profile-info">
+                <h2>Dr. John Doe</h2>
+                <br>
+                <p>Specialization: Cardiology</p>
+                <p>Experience: 10 years</p>
+                <p>Contact: 9909449049</p>
+            </div>  
+        </div>
+    </div>
+</body>
+</html>

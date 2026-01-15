@@ -10,3 +10,4 @@ for i in a:
         continue
     else:
         print(i, end = " ")
+# OP: P y t h n 

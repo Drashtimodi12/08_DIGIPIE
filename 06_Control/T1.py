@@ -11,3 +11,9 @@ for i in range(1, 11):
         break
     else:
         print(i)
+# OP:
+# 1
+# 3
+# 5
+# 7
+# 9

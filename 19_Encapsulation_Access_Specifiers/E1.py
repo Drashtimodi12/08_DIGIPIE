@@ -62,3 +62,12 @@ s1.set_marks(90)
 print("\n----- After Updating -----")
 print("Updated Age:", s1.get_age())
 print("Updated Marks:", s1.get_marks())
+# OP:
+# ----- Student Details -----
+# Name: Drashti
+# Age: 21
+# Marks: 80
+
+# ----- After Updating -----
+# Updated Age: 25
+# Updated Marks: 90

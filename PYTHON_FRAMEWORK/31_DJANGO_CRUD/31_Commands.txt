@@ -1,0 +1,91 @@
+PS C:\PYTHON_PROGRAM\PYTHON_FRAMEWORK\31_DJANGO_CRUD> py -m venv myenv
+PS C:\PYTHON_PROGRAM\PYTHON_FRAMEWORK\31_DJANGO_CRUD> .\myenv\Scripts\activate
+(myenv) PS C:\PYTHON_PROGRAM\PYTHON_FRAMEWORK\31_DJANGO_CRUD> pip install django pillow
+Collecting django
+  Using cached django-5.2.5-py3-none-any.whl.metadata (4.1 kB)
+Collecting pillow
+  Using cached pillow-11.3.0-cp313-cp313-win_amd64.whl.metadata (9.2 kB)
+Collecting asgiref>=3.8.1 (from django)
+  Using cached asgiref-3.9.1-py3-none-any.whl.metadata (9.3 kB)
+Collecting sqlparse>=0.3.1 (from django)
+  Using cached sqlparse-0.5.3-py3-none-any.whl.metadata (3.9 kB)
+Collecting tzdata (from django)
+  Using cached tzdata-2025.2-py2.py3-none-any.whl.metadata (1.4 kB)
+Using cached django-5.2.5-py3-none-any.whl (8.3 MB)
+Collecting asgiref>=3.8.1 (from django)
+  Using cached asgiref-3.9.1-py3-none-any.whl.metadata (9.3 kB)
+Collecting sqlparse>=0.3.1 (from django)
+  Using cached sqlparse-0.5.3-py3-none-any.whl.metadata (3.9 kB)
+Collecting tzdata (from django)
+  Using cached tzdata-2025.2-py2.py3-none-any.whl.metadata (1.4 kB)
+Using cached django-5.2.5-py3-none-any.whl (8.3 MB)
+Collecting sqlparse>=0.3.1 (from django)
+  Using cached sqlparse-0.5.3-py3-none-any.whl.metadata (3.9 kB)
+Collecting tzdata (from django)
+  Using cached tzdata-2025.2-py2.py3-none-any.whl.metadata (1.4 kB)
+Using cached django-5.2.5-py3-none-any.whl (8.3 MB)
+  Using cached sqlparse-0.5.3-py3-none-any.whl.metadata (3.9 kB)
+Collecting tzdata (from django)
+  Using cached tzdata-2025.2-py2.py3-none-any.whl.metadata (1.4 kB)
+Using cached django-5.2.5-py3-none-any.whl (8.3 MB)
+  Using cached tzdata-2025.2-py2.py3-none-any.whl.metadata (1.4 kB)
+Using cached django-5.2.5-py3-none-any.whl (8.3 MB)
+Using cached pillow-11.3.0-cp313-cp313-win_amd64.whl (7.0 MB)
+Using cached pillow-11.3.0-cp313-cp313-win_amd64.whl (7.0 MB)
+Using cached asgiref-3.9.1-py3-none-any.whl (23 kB)
+Using cached sqlparse-0.5.3-py3-none-any.whl (44 kB)
+Using cached asgiref-3.9.1-py3-none-any.whl (23 kB)
+Using cached sqlparse-0.5.3-py3-none-any.whl (44 kB)
+Using cached sqlparse-0.5.3-py3-none-any.whl (44 kB)
+Using cached tzdata-2025.2-py2.py3-none-any.whl (347 kB)
+Installing collected packages: tzdata, sqlparse, pillow, asgiref, django
+Successfully installed asgiref-3.9.1 django-5.2.5 pillow-11.3.0 sqlparse-0.5.3 tzdata-2025.2
+
+[notice] A new release of pip is available: 25.1.1 -> 25.2
+[notice] To update, run: python.exe -m pip install --upgrade pip
+
+
+(myenv) PS C:\PYTHON_PROGRAM\PYTHON_FRAMEWORK\31_DJANGO_CRUD> py -m django startproject Project .
+(myenv) PS C:\PYTHON_PROGRAM\PYTHON_FRAMEWORK\31_DJANGO_CRUD> py .\manage.py startapp myapp
+
+(myenv) PS C:\PYTHON_PROGRAM\PYTHON_FRAMEWORK\31_DJANGO_CRUD> py .\manage.py makemigrations
+Migrations for 'myapp':
+  myapp\migrations\0001_initial.py
+    + Create model Student
+(myenv) PS C:\PYTHON_PROGRAM\PYTHON_FRAMEWORK\31_DJANGO_CRUD> py .\manage.py migrate       
+Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, myapp, sessions
+Running migrations:
+  Applying contenttypes.0001_initial... OK
+  Applying auth.0001_initial... OK
+  Applying admin.0001_initial... OK
+  Applying admin.0002_logentry_remove_auto_add... OK
+  Applying admin.0003_logentry_add_action_flag_choices... OK
+  Applying contenttypes.0002_remove_content_type_name... OK
+  Applying auth.0002_alter_permission_name_max_length... OK
+  Applying auth.0003_alter_user_email_max_length... OK
+  Applying auth.0004_alter_user_username_opts... OK
+  Applying auth.0005_alter_user_last_login_null... OK
+  Applying auth.0006_require_contenttypes_0002... OK
+  Applying auth.0007_alter_validators_add_error_messages... OK
+  Applying auth.0008_alter_user_username_max_length... OK
+  Applying auth.0009_alter_user_last_name_max_length... OK
+  Applying auth.0010_alter_group_name_max_length... OK
+  Applying auth.0011_update_proxy_permissions... OK
+  Applying auth.0012_alter_user_first_name_max_length... OK
+  Applying myapp.0001_initial... OK
+  Applying sessions.0001_initial... OK
+
+
+(myenv) PS C:\PYTHON_PROGRAM\PYTHON_FRAMEWORK\31_DJANGO_CRUD> py .\manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 18, 2025 - 20:03:52
+Django version 5.2.5, using settings 'Project.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+WARNING: This is a development server. Do not use it in a production setting. Use a production WSGI or ASGI server instead.
+For more information on production servers see: https://docs.djangoproject.com/en/5.2/howto/deployment/

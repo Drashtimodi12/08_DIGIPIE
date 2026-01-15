@@ -1,0 +1,2 @@
+This is simple string.
+This is python Practical in this folder.

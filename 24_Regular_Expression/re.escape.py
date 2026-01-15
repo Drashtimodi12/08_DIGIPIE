@@ -18,3 +18,7 @@ pattern = re.escape(text)  # becomes "file\.txt"
 print(pattern)
 result = re.search(pattern, "my file.txt backup")
 print(result.group())
+
+# OP:
+# file\.txt
+# file.txt

@@ -17,3 +17,5 @@ class Laptop:
 L1 = Laptop('Elitebook', 25000)
 
 L1.display()
+# OP:
+# My laptop brand is Dell and model name Elitebook, price is something 25000.

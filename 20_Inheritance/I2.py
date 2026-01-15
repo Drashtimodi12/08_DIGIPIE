@@ -30,3 +30,9 @@ g = GamingLaptop()
 g.info()
 g.features()
 g.gaming_mode()
+# OP:
+# Enter Device Name: iphone
+# Your Device Name is:  iphone
+# Enter Laptop version: i5
+# Your laptop features is:  i5
+# Not perfect for Gamming. please by new laptop.

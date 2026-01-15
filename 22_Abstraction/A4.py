@@ -31,6 +31,9 @@ class Rectangle(Shape):
 
 c = Circle(5)
 c.area()
+# OP: Area of Circle=  78.5
+
 
 r = Rectangle(10, 15)
 r.area()
+# OP: Area of Rectangle=  150

@@ -17,3 +17,4 @@ replace = "..."
 mystr = "My contact number is 990193223."
 result = re.subn(pattern, replace, mystr)
 print(result)
+# OP: ('My...contact...number...is...990193223.', 4)

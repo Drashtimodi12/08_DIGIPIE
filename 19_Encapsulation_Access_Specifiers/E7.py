@@ -50,3 +50,12 @@ c1.set_speed()
 c1.accelerate()
 c1.brake()
 c1.get_speed()
+# op:
+# Enter your car speed: 100
+# Speed set to 100 km/h
+
+# Enter your car accelerate speed: 10
+# Car accelerated. Current speed: 110 km/h
+
+# Enter your car brake value: 0
+# Car slowed down. Current speed: 110 km/h

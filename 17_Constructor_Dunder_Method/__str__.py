@@ -17,5 +17,5 @@ class string:
 s = string('Drashti')
 
 # When we print the object 's', __str__ method automatically executes
-print(s)
+print(s)        # OP: My name is Drashti.
 # If you removed the __str__ method:   <__main__.string object at 0x0000025F5B3>

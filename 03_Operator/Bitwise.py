@@ -1,28 +1,29 @@
-# Bitwise Operators:  & , | , ^ , << , >> , ~
+# Bitwise Operators: &, |, ^, ~, <<, >>
+
+a = 10  # 1010 in binary
+b = 4   # 0100 in binary
 
 
-# Perform bitwise AND, OR, XOR on two numbers.
-x = 10   # 1010 in binary
-y = 5    # 0101 in binary
+# Bitwise AND
+c = a & b  # Bitwise AND operation
+print("Bitwise AND:", c)  # Output: 0 (0000 in binary)
 
-print("Bitwise AND (x & y):", x & y)
-print("Bitwise OR  (x | y):", x | y)
-print("Bitwise XOR (x ^ y):", x ^ y)
+# Bitwise OR
+c = a | b  # Bitwise OR operation   
+print("Bitwise OR:", c)  # Output: 14 (1110 in binary)
 
+# Bitwise XOR
+c = a ^ b  # Bitwise XOR operation
+print("Bitwise XOR:", c)  # Output: 14 (1110 in binary)
 
-print("\n===========================\n")
+# Bitwise NOT
+c = ~a  # Bitwise NOT operation
+print("Bitwise NOT:", c)  # Output: -11 (inverts all bits, 1010 becomes 0101, which is -11 in two's complement)
 
-# Shift a number left by 2 bits.
-print("Left Shift:", x << 2)
+# Left Shift
+c = a << 2  # Left shift by 2 bits
+print("Left Shift:", c)  # Output: 40 (101000 in binary)
 
-print("\n===========================\n")
-
-# Convert a number to binary, then apply bitwise NOT.
-binary = bin(x)
-result = ~x
-not_binary = bin(result)
-
-print("Original Number:", x)
-print("Binary:", binary)
-print("Bitwise NOT (~n):", result)      # ~n  =  -(n + 1)
-print("Binary of NOT:", not_binary)
+# Right Shift
+c = a >> 2  # Right shift by 2 bits
+print("Right Shift:", c)  # Output: 2 (0010 in binary)

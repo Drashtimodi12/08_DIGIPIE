@@ -9,3 +9,7 @@ for i in num:
         continue
     else:
         print(i)
+# OP:
+# 12
+# 18
+# 20

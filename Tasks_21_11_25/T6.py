@@ -11,3 +11,6 @@ class Dog(Animal):
 
 d = Dog()
 d.sound()
+# OP:
+# All animals different sounds...
+# Woof Woof!

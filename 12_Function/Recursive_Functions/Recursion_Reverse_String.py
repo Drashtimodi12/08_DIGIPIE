@@ -16,3 +16,6 @@ def reverse(a):
 
 word = input("Enter string: ").lower()
 print(reverse(word))
+# OP:
+# Enter string: 213
+# 312

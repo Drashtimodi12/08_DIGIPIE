@@ -11,6 +11,9 @@ for i in range(2, num + 1):
     print(c, end = " ")
     a = b
     b = c
+# OP:
+# Enter a number: 5
+# 0 1 1 2 3 5
 
 print("\n====================\n")
 
@@ -26,4 +29,6 @@ while num > 2:
     a = b
     b = c
     num -= 1
-    
+# OP:
+# Enter a number: 5
+# 0 1 1 2 3 

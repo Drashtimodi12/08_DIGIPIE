@@ -24,7 +24,13 @@ class Bike(Vehicle):
 c = Car()
 c.start()
 c.wheels()
+# OP:
+# Vehicle is starting...
+# A car has 4 wheels.
 
 b = Bike()
 b.start()
 b.wheels()
+# OP:
+# Vehicle is starting...
+# A bike has 2 wheels.

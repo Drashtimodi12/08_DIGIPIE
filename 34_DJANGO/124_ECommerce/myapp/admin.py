@@ -24,8 +24,8 @@ class CartAdmin(admin.ModelAdmin):
 
 @admin.register(Order)
 class OrderAdmin(admin.ModelAdmin):
-    list_display = ('id', 'user', 'total_price', 'status', 'order_date', 'updated_at')
-    list_filter = ('status', 'order_date')
+    list_display = ('id', 'user', 'total_price', 'created_at')
+    list_filter = ('created_at',)
     search_fields = ('user__username',)
 
 @admin.register(OrderItem)

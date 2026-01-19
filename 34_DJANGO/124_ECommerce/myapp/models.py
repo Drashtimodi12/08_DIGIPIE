@@ -45,21 +45,12 @@ class Cart(models.Model):
 
 
 class Order(models.Model):
-    status_choices = (
-        ('PENDING', 'Pending'),
-        ('PAID', 'Paid'),
-        ('SHIPPED', 'Shipped'),
-        ('DELIVERED', 'Delivered'),
-        ('CANCELLED', 'Cancelled'),
-    )
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='orders')
     total_price = models.DecimalField(max_digits=10, decimal_places=2, default=0.00)
-    status = models.CharField(max_length=10, choices=status_choices, default='PENDING')
-    order_date = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
+    created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return f"{self.id} | {self.user.username} | {self.total_price} | {self.status} | {self.order_date} | {self.updated_at}"
+        return f"{self.id} | {self.user.username} | {self.total_price} | {self.created_at}"
     
     def calculate_total(self):
         total = sum(item.price * item.quantity for item in self.order_items.all())

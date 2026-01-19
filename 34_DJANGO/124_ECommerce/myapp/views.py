@@ -230,7 +230,7 @@ class ProductSearchAPIView(APIView):
 class CartAPIView(APIView):
 
     authentication_classes = [JWTAuthentication]
-    # permission_classes = [IsAuthenticated]
+    # permission_classes = [IsAuthenticated]  
     def get_permissions(self):
         if self.request.method in ['GET', 'POST', 'PUT', 'DELETE']:
             return [IsAuthenticated()]
@@ -254,23 +254,22 @@ class CartAPIView(APIView):
             user = request.user     # Get logged-in user
             if not user.is_authenticated:           # Check if user is authenticated
                 return Response({'errors': ' Authentication Required!'})
+            
+            product_id = request.data.get('product')        # Get product id from request body
+            isExist = Cart.objects.filter(product_id=product_id, user_id=user.id).exists()      # Check if product already exists in user's cart
+            if isExist:
+                return Response({'error': 'Product already exists in cart'})
+
+            request.data['user'] = user.id      # Attach logged-in user id to request data
+            ser = CartSerializer(data=request.data)
+            if ser.is_valid():
+                ser.save()
+                return Response({'cart': ser.data})
             else:
-                product_id = request.data.get('product')        # Get product id from request body
-                isExist = Cart.objects.filter(product_id=product_id, user_id=user.id).exists()      # Check if product already exists in user's cart
-                if isExist:
-                    return Response({'error': 'Product already exists in cart'}, status=400)
-
-                request.data['user'] = user.id      # Attach logged-in user id to request data
-
-                ser = CartSerializer(data=request.data)
-                if ser.is_valid():
-                    ser.save()
-                    return Response({'cart': ser.data})
-                else:
-                    return Response({'errors': ser.errors, 'message':'Something wents wrong!'})
+                return Response({'errors': ser.errors, 'message':'Something wents wrong!'})
         except Exception as e:
             return Response({'errors': str(e), 'message': 'Something wents wrong!'})
-
+    
 
     def delete(self, request, pk):
         try:
@@ -283,7 +282,6 @@ class CartAPIView(APIView):
                 return Response({'message': 'Cart item deleted successfully'})
         except Exception as e:
             return Response({'errors': str(e), 'message': 'Something wents wrong!'})
-
 
 
 class ChangeQtyAPIView(APIView):
@@ -299,20 +297,19 @@ class ChangeQtyAPIView(APIView):
         try:
             user = request.user
             if not user.is_authenticated:
-                return Response({'error': 'Authentication required'})
+                return Response({'error': 'Authentication required'})            
+            cart_item = Cart.objects.get(pk=pk, user=user)
+            request.data['quantity'] = cart_item.quantity + request.data['quantity']   # Default to current quantity if not provided
+            if request.data['quantity'] < 1:
+                cart_item.delete()
+                return Response({'error': 'Quantity must be at least 1'})
             else:
-                cart_item = Cart.objects.get(pk=pk, user=user)
-                request.data['quantity'] = cart_item.quantity + request.data['quantity']   # Default to current quantity if not provided
-                if request.data['quantity'] < 1:
-                    cart_item.delete()
-                    return Response({'error': 'Quantity must be at least 1'})
+                ser = CartSerializer(cart_item, data=request.data, partial=True)
+                if ser.is_valid():
+                    ser.save()
+                    return Response({'cart': ser.data})
                 else:
-                    ser = CartSerializer(cart_item, data=request.data, partial=True)
-                    if ser.is_valid():
-                        ser.save()
-                        return Response({'cart': ser.data})
-                    else:
-                        return Response({'errors': ser.errors})
+                    return Response({'errors': ser.errors})
         except Exception as e:
             return Response({'errors': str(e), 'message': 'Something wents wrong!'})
 
@@ -327,7 +324,7 @@ class ChangeQtyAPIView(APIView):
 # ==============================
 class OrderAPIView(APIView):
     authentication_classes = [JWTAuthentication]
-    
+        
     def get(self, request):
         try: 
             user = request.user
@@ -375,7 +372,6 @@ class OrderAPIView(APIView):
                         return Response({'errors': ser.errors})
         except Exception as e:
             return Response({'errors': str(e), 'message': 'Something wents wrong!'})
-    
 
     
   
@@ -384,3 +380,16 @@ class OrderAPIView(APIView):
 # ==============================
 
 
+
+
+# ==============================
+# Payment
+# ==============================
+def Payment(request):
+    authentication_classes = [JWTAuthentication]
+    # Initialize Razorpay client with your API key and secret
+    amount = int(request.GET.get('amount') ) # Default amount is 500 if not provided
+    client = razorpay.Client(auth=("rzp_test_oox9ZKsz6Uu09W", "1umN06wc9ZHC2blBvuR41bN9"))
+    data = { "amount": amount*100, "currency": "INR", "receipt": "order_rcptid_11" }
+    payment = client.order.create(data=data) # Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+    return JsonResponse(payment, safe=False)

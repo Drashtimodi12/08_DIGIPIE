@@ -47,6 +47,18 @@ urlpatterns = [
 
     path('cart/change-qty/<int:pk>/', ChangeQtyAPIView.as_view(), name='change-qty'),
 
+    # ==============================
+    # Cart
+    # ==============================
+    path('order/', OrderAPIView.as_view(), name='OrderAPIView'),
+    path('order/<int:pk>', OrderAPIView.as_view(), name='OrderAPIView'),
+
+
+    # ==============================
+    # Payment
+    # ==============================
+    path('payment', Payment, name='payment'),
+
 
     # ==============================
     # DRF Token Authentication URL

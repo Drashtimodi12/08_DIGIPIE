@@ -66,6 +66,7 @@ class CartSerializer(serializers.ModelSerializer):
 
     def to_representation(self, instance):
         representation = super().to_representation(instance)
+        representation['user'] = UserSerializer(instance.user).data
         representation['product'] = ProductSerializer(instance.product).data
         return representation
 

@@ -1,3 +1,7 @@
+Ctri+F :- Find something
+Ctrl+H :- Replace Finding word
+
+
 --------------------Setup PythonDjango Project---------------------------------
 
 STEP 1:- Create Main Folder
@@ -108,10 +112,13 @@ SIMPLE_JWT =
     		}
 	}
 
+	# Default primary key field type
+	# https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
+	DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 	# URL path used to access static files like CSS, JS, and images
 	# https://docs.djangoproject.com/en/5.2/howto/static-files/
-		STATIC_URL = 'static/'
+	STATIC_URL = 'static/'
 
 	# The directory where static files are collected
 	# Folders where Django will look for project-level static files

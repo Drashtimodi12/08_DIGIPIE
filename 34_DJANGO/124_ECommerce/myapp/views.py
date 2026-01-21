@@ -373,7 +373,8 @@ class OrderAPIView(APIView):
         except Exception as e:
             return Response({'errors': str(e), 'message': 'Something wents wrong!'})
 
-    
+    def put(self, request, pk):
+        pass
   
 # ==============================
 # OrderItem

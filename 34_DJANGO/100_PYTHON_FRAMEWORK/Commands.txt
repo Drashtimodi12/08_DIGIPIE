@@ -1,3 +1,7 @@
+Ctri+F :- Find something
+Ctrl+H :- Replace Finding word
+
+
 --------------------Setup PythonDjango Project---------------------------------
 
 STEP 1:- Create Main Folder
@@ -108,22 +112,40 @@ SIMPLE_JWT =
     		}
 	}
 
+	# Default primary key field type
+	# https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
+	DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+	# URL path used to access static files like CSS, JS, and images
+	# https://docs.djangoproject.com/en/5.2/howto/static-files/
+	STATIC_URL = 'static/'
 
 	# The directory where static files are collected
-	STATICFILES_DIRS = [
-    		BASE_DIR / 'static',
-	]
+	# Folders where Django will look for project-level static files
+	STATICFILES_DIRS = [BASE_DIR / 'static',]
 
-
-	# Media files (User-uploaded content)
+	# URL path used to access user-uploaded media files
 	MEDIA_URL = '/media/'
+
+	# File system location where uploaded media files will be stored
 	MEDIA_ROOT = BASE_DIR / 'media'
+
 
 STEP 10:- Views.py For Authentication django rest framework
 	views.py -> api secure karva mate
-	from django.http import HttpResponse
-	from rest_framework.authentication import SessionAuthentication, BasicAuthentication
-	from rest_framework.permissions import IsAuthenticated						OR
+	from django.shortcuts import render              # Renders HTML templates with context data
+	from django.shortcuts import redirect   # Redirects user to another URL or view
+	from django.http import HttpResponse, JsonResponse  # Sends plain text or JSON HTTP responses
+	from rest_framework.response import Response     # Sends API responses in JSON format
+	from rest_framework.decorators import api_view   # Converts function-based views into DRF APIs
+	from rest_framework.views import APIView          # Base class for class-based DRF APIs
+	from rest_framework.authentication import SessionAuthentication, BasicAuthentication  
+		# Handles user authentication using sessions and basic auth
+	from rest_framework.permissions import IsAuthenticated  
+		# Allows access only to authenticated (logged-in) users
+
+
+						OR
 	from rest_framework_simplejwt.authentication import JWTAuthentication
 	from rest_framework.permissions import IsAuthenticated
 
@@ -146,7 +168,6 @@ STEP 12:- Changes in Project urls.py
             ]
 
 STEP 13:- Changes in AppName urls.py
-            from django.contrib import admin
             from django.urls import path
             from myapp.views import *
 	    from django.conf import settings
@@ -241,26 +262,37 @@ Example: s = Student(name="Bob"); s.save()
 ---------------------------2. Reading Data (Querying)------------------------------------
 all(): Returns all records.
 Example: Student.objects.all()
+
 filter(**kwargs): Returns matching records.
 Example: Student.objects.filter(age=22)
+
 exclude(**kwargs): Returns non-matching records.
 Example: Student.objects.exclude(age=22)
+
 get(**kwargs): Returns single matching object or raises DoesNotExist.
 Example: Student.objects.get(id=1)
+
 first(): Returns the first object from a queryset.
 Example: Student.objects.all().first()
+
 last(): Returns the last object from a queryset.
 Example: Student.objects.all().last()
+
 count(): Returns number of objects in queryset.
 Example: Student.objects.count()
+
 exists(): Returns True if records exist.
 Example: Student.objects.filter(age=22).exists()
+
 values(): Returns dictionaries instead of model instances.
 Example: Student.objects.values('name', 'age')
+
 values_list(): Returns tuples instead of model instances.
 Example: Student.objects.values_list('name', flat=True)
+
 order_by(): Orders queryset.
 Example: Student.objects.order_by('name')
+
 distinct(): Removes duplicates.
 Example: Student.objects.values('age').distinct()
 
@@ -302,7 +334,7 @@ Student.objects.raw('SELECT * FROM app_student')
 
 -------------------------------------------------------------------------------------------------------------------------------------
 
-(myenv) PS C:\PYTHON_PROGRAM\PYTHON_FRAMEWORK\30_Static_Models_ORM\Project> py .\manage.py shell
+(myenv) PS C:\PYTHON_PROGRAM\PYTHON_FRAMEWORK\30_Static_Models_ORM\Project> **********py .\manage.py shell****************
 8 objects imported automatically (use -v 2 for details).
 
 Python 3.10.7 (tags/v3.10.7:6cc6b13, Sep  5 2022, 14:08:36) [MSC v.1933 64 bit (AMD64)] on win32

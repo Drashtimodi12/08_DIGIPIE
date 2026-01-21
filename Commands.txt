@@ -108,16 +108,22 @@ SIMPLE_JWT =
     		}
 	}
 
+	# Default primary key field type
+	# https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
+	DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+	# Static files (CSS, JavaScript, Images)
+	# https://docs.djangoproject.com/en/6.0/howto/static-files/
+	STATIC_URL = 'static/'
 
 	# The directory where static files are collected
-	STATICFILES_DIRS = [
-    		BASE_DIR / 'static',
-	]
+	STATICFILES_DIRS = [BASE_DIR / 'static',]
 
 
 	# Media files (User-uploaded content)
 	MEDIA_URL = '/media/'
 	MEDIA_ROOT = BASE_DIR / 'media'
+
 
 STEP 10:- Views.py For Authentication django rest framework
 	views.py -> api secure karva mate

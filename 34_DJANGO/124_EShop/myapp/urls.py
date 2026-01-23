@@ -20,10 +20,12 @@ urlpatterns = [
     path('categories', categories, name='categories'),
     path('products', products, name='products'),
 
-    path("addtocart",addtocart,name="addtocart"),
-    path("deletecart",deletecart,name="deletecart"),
-    path("changeqty",changeqty,name="changeqty"),
+    path('addtocart', addtocart, name='addtocart'),
+    path('deletecart',deletecart,name='deletecart'),
+    path('changeqty',changeqty,name='changeqty'),
 
+    path("account/dashboard/", account_dashboard, name='account_dashboard'),
+    path("account/orders/", user_orders, name='user_orders'),
 ]
 
 if settings.DEBUG:

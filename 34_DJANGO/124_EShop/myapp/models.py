@@ -37,9 +37,13 @@ class Cart(models.Model):
 
     class Meta:
         unique_together = ('user', 'product')
+    
+    def total_price(self):
+        return self.product.price * self.quantity
 
     def __str__(self):
         return f"{self.user.username} | {self.product.name} | {self.quantity} | {self.created_at}"
+
 
 
 

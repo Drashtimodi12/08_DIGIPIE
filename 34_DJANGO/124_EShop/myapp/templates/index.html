@@ -96,7 +96,7 @@
 
             </div>
           </div>
-          <div class="tab__item" content id="popular">
+          <!-- <div class="tab__item" content id="popular">
             <div class="products__container grid">
               <div class="product__item">
                 <div class="product__banner">
@@ -997,7 +997,7 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
       </section>
 
@@ -1798,6 +1798,19 @@
           </div>`
         )
       });
+    });
+  };
+
+  const addToCart = (pid) => {
+    $.get("addtocart", {pid}, function(rt){
+      // alert(rt)
+      if(rt == "AnonymousUser"){
+        location.href = "login_register";
+      } 
+      else 
+      {
+        alert(rt)
+      }
     });
   };
 </script>

@@ -37,7 +37,7 @@
           </div>
           <div class="tabs__content">
             <div class="tab__content active-tab" content id="dashboard">
-              <h3 class="tab__header">Hello Rosie</h3>
+              <h3 class="tab__header" id="username">Hello</h3>
               <div class="tab__body">
                 <p class="tab__description">
                   From your account dashboard. you can easily check & view your
@@ -59,29 +59,29 @@
                       <th>Actions</th>
                     </tr>
                   </thead>
-                  <tbody>
+                  <!-- <tbody>
                     <tr>
                       <td>#1357</td>
                       <td>March 19, 2022</td>
                       <td>Processing</td>
-                      <td>$125.00</td>
+                      <td>RS.125.00</td>
                       <td><a href="#" class="view__order">View</a></td>
                     </tr>
                     <tr>
                       <td>#2468</td>
                       <td>June 29, 2022</td>
                       <td>Completed</td>
-                      <td>$364.00</td>
+                      <td>RS.364.00</td>
                       <td><a href="#" class="view__order">View</a></td>
                     </tr>
                     <tr>
                       <td>#2366</td>
                       <td>August 02, 2022</td>
                       <td>Completed</td>
-                      <td>$280.00</td>
+                      <td>RS.280.00</td>
                       <td><a href="#" class="view__order">View</a></td>
                     </tr>
-                  </tbody>
+                  </tbody> -->
                 </table>
               </div>
             </div>
@@ -167,6 +167,47 @@
         </div>
       </section>
     </main>
+
+      
+<script>
+$(document).ready(function () {
+    loadDashboard();
+    loadOrders();
+});
+
+function loadDashboard() {
+    $.get("/account/dashboard/", function (rt) {
+        $("#username").text(`Hello ${rt.username}`);
+    });
+}
+
+function loadOrders() {
+    $.get("/account/orders/", function (rt) {
+        $("#orders-body").empty();
+
+        if (rt.orders.length === 0) {
+            $("#orders-body").append(`
+                <tr>
+                    <td colspan="5">No orders found</td>
+                </tr>
+            `);
+            return;
+        }
+
+        rt.orders.forEach(order => {
+            $("#orders-body").append(`
+                <tr>
+                    <td>#${order.id}</td>
+                    <td>${order.date}</td>
+                    <td>${order.status}</td>
+                    <td>RS.${order.total}</td>
+                    <td><a href="#" class="view__order">View</a></td>
+                </tr>
+            `);
+        });
+    });
+}
+</script>
 
 
 {% endblock body %}

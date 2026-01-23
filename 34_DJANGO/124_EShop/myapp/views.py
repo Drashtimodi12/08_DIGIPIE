@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.contrib.auth import authenticate, login, logout
 from django.http import JsonResponse, HttpResponse
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from myapp.models import *
 
@@ -12,8 +13,13 @@ def index(request):
 def accounts(request):
     return render(request, 'accounts.html')
 
+@login_required(login_url="login_register")
 def cart(request):
-    return render(request, 'cart.html')
+    cart = Cart.objects.filter(user=request.user)
+    total=0
+    for i in cart:
+        total += i.product.price * i.quantity
+    return render(request, "cart.html",{"carts":cart, "total":total})
 
 def checkout(request):
     return render(request, 'checkout.html')
@@ -95,8 +101,7 @@ def addtocart(request):
     try :
         pid = request.GET['pid']
         user = request.user
-    
-
+        # print(pid, user)
         if user.is_anonymous:
             return HttpResponse(user)
         else :                 
@@ -120,8 +125,31 @@ def deletecart(request):
 def changeqty(request):
     qty = request.GET['qty']
     cid = request.GET['cid']
-
+    # print(cid, qty)
     cart = Cart.objects.get(pk=cid)
     cart.quantity=qty
     cart.save()
     return HttpResponse("Qty changed...")
+    
+@login_required
+def account_dashboard(request):
+    return JsonResponse({
+        "username": request.user.username,
+        "email": request.user.email
+    })
+
+
+@login_required
+def user_orders(request):
+    orders = Order.objects.filter(user=request.user).order_by('-created_at')
+
+    data = []
+    for order in orders:
+        data.append({
+            "id": order.id,
+            "date": order.created_at.strftime("%d %b %Y"),
+            "total": float(order.total_price),
+            "status": "Processing"  # add real status later if needed
+        })
+
+    return JsonResponse({"orders": data})

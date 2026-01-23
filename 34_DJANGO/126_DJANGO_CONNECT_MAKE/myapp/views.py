@@ -8,7 +8,7 @@ import requests     # To send HTTP requests to Make.com
 # Make.com Webhook URL
 # -----------------------------
 # This is the URL of your Make.com custom webhook
-MAKE_WEBHOOK_URL = "https://hook.eu1.make.com/dhibctm59o8xh9dbrmaep4e115cyl232"
+MAKE_WEBHOOK_URL = "https://hook.eu1.make.com/1v7ai3zqv6o63dkqemddmsivaa6cjjvj"
 
 
 # -----------------------------

@@ -30,20 +30,32 @@
               </tr>
             </thead>
             <tbody>
-              {%for cart in carts%}
-              <tr>
-                <td><img src="media/{{cart.product.image}}" alt="" class="table__img" /></td>
-                <td>
-                  <h3 class="table__title">{{cart.product.name}}</h3>
-                  <p class="table__description">{{cart.product.description}}</p>
-                </td>
-                <td>
-                  <span class="table__price">${{cart.product.price}}</span>
-                </td>
-                <td><input type="number" value="{{cart.quantity}}" class="quantity"/></td>
-                <td><span class="subtotal">${{cart.total_price}}</span></td> 
-                <td><i class="fi fi-rs-trash table__trash"></i></td>
-              </tr> 
+              {% for cart in carts %}
+                <tr>
+                  <td><img src="media/{{cart.product.image1}}" alt="" class="table__img" /></td>
+                  <td>
+                    <h3 class="table__title">{{cart.product.name}}</h3>
+                    <p class="table__description">{{cart.product.description}}</p>
+                  </td>
+                  <td>
+                    <span class="table__price">RS.{{cart.product.price}}</span>
+                  </td>
+                  <td>
+                    <input 
+                      type="number" 
+                      value="{{cart.quantity}}" 
+                      class="quantity" 
+                      onchange="changeQty(this.value, '{{cart.id}}')"
+                    />
+                  </td>
+                  <td><span class="subtotal">RS.{{cart.total_price}}</span></td> 
+                  <td>
+                    <i 
+                      class="fi fi-rs-trash table__trash" 
+                      onclick="deleteCart('{{cart.id}}')"
+                    ></i>
+                  </td>
+                </tr> 
               {%endfor%}
             </tbody>
           </table>
@@ -99,15 +111,15 @@
             <table class="cart__total-table">
                 <tr>
                   <td><span class="cart__total-title">Cart Subtotal</span></td>
-                  <td><span class="cart__total-price">RS.${{total}}</span></td>
+                  <td><span class="cart__total-price">RS.{{total}}</span></td>
                 </tr>
                 <tr>
                   <td><span class="cart__total-title">Shipping</span></td>
-                  <td><span class="cart__total-price">$0.00</span></td>
+                  <td><span class="cart__total-price">RS.0.00</span></td>
                 </tr>
                 <tr>
                   <td><span class="cart__total-title">Total</span></td>
-                  <td><span class="cart__total-price">$<span id='amount'>{{total}}</span></span></td>
+                  <td><span class="cart__total-price">RS.<span id='amount'>{{total}}</span></span></td>
                 </tr>
             </table>
             <a href="checkout.html" class="btn flex btn--md">
@@ -146,12 +158,14 @@
 
 <script>
   const deleteCart = (cid) => {
+    alert(cid);
     $.get("deletecart", { cid }, function (rt) {
       location.reload();
     });
   };
 
   const changeQty = (qty, cid) => {
+    // alert(qty)
     $.get("changeqty", { qty, cid }, function (rt) {
       location.reload();
     });

@@ -1,0 +1,12 @@
+PS E:\08_DIGIPIE\34_DJANGO\99_ALL_SETTINGS> py -m venv myenv
+
+PS E:\08_DIGIPIE\34_DJANGO\99_ALL_SETTINGS> .\myenv\Scripts\activate
+
+(myenv) PS E:\08_DIGIPIE\34_DJANGO\99_ALL_SETTINGS> pip install django djangorestframework djangorestframework-simplejwt pillow faker mysqlclient
+Collecting django...............................
+[notice] A new release of pip is available: 25.1.1 -> 25.3
+[notice] To update, run: python.exe -m pip install --upgrade pip
+
+(myenv) PS E:\08_DIGIPIE\34_DJANGO\99_ALL_SETTINGS> py -m django startproject Project .
+
+(myenv) PS E:\08_DIGIPIE\34_DJANGO\99_ALL_SETTINGS> py .\manage.py startapp myapp

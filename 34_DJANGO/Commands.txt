@@ -42,7 +42,7 @@ STEP 8:- Create a Django App
 STEP 9:- Add the App to Settings File
         Main Folder -> ProjectName -> Project -> Settings.py -> 
 	
-	from datetime import timedelta
+	https://www.aweber.com/users/campaigns
 
 	INSTALLED_APPS{ 
 		'rest_framework', 'rest_framework.authtoken', 'AppName'

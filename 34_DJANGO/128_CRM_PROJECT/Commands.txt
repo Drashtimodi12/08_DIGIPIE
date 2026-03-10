@@ -1,0 +1,23 @@
+PS E:\08_DIGIPIE\34_DJANGO\128_CRM_PROJECT> py -m venv MyENV
+
+PS E:\08_DIGIPIE\34_DJANGO\128_CRM_PROJECT> .\MyENV\Scripts\activate
+
+(MyENV) PS E:\08_DIGIPIE\34_DJANGO\128_CRM_PROJECT> pip install django djangorestframework djangorestframework-simplejwt pillow faker mysqlclient
+Installing collected packages: tzdata, sqlparse, pyjwt, pillow, mysqlclient, asgiref, faker, django, djangorestframework, djangorestframework-simplejwt
+Successfully installed asgiref-3.11.1 django-6.0.2 djangorestframework-3.16.1 djangorestframework-simplejwt-5.5.1 faker-40.5.1 mysqlclient-2.2.8 pillow-12.1.1 pyjwt-2.11.0 sqlparse-0.5.5 tzdata-2025.3
+[notice] A new release of pip is available: 25.1.1 -> 26.0.1
+[notice] To update, run: python.exe -m pip install --upgrade pip
+
+(MyENV) PS E:\08_DIGIPIE\34_DJANGO\128_CRM_PROJECT> pip install requests python-dotenv
+Installing collected packages: urllib3, python-dotenv, idna, charset_normalizer, certifi, requests
+Successfully installed certifi-2026.2.25 charset_normalizer-3.4.4 idna-3.11 python-dotenv-1.2.1 requests-2.32.5 urllib3-2.6.3
+[notice] A new release of pip is available: 25.1.1 -> 26.0.1
+[notice] To update, run: python.exe -m pip install --upgrade pip
+
+(MyENV) PS E:\08_DIGIPIE\34_DJANGO\128_CRM_PROJECT> py -m django startproject CRM_PROJECT .
+
+(MyENV) PS E:\08_DIGIPIE\34_DJANGO\128_CRM_PROJECT> py .\manage.py startapp ACCOUNT 
+(MyENV) PS E:\08_DIGIPIE\34_DJANGO\128_CRM_PROJECT> py .\manage.py startapp DASHBOARD
+(MyENV) PS E:\08_DIGIPIE\34_DJANGO\128_CRM_PROJECT> py .\manage.py startapp CRM
+
+
